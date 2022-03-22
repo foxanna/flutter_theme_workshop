@@ -1,0 +1,6 @@
+name: Consistent design with Flutter Theme
+type: flutter
+steps:
+  - name: Introduction
+    directory: 01_introduction
+    has_solution: false
