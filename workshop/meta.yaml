@@ -3,4 +3,4 @@ type: flutter
 steps:
   - name: Introduction
     directory: 01_introduction
-    has_solution: false
+    has_solution: true
