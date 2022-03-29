@@ -7,3 +7,6 @@ steps:
   - name: ThemeData
     directory: 02_themedata
     has_solution: true
+  - name: Styling texts and icons
+    directory: 03_texts_icons
+    has_solution: true
