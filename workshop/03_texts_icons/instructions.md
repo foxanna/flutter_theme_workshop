@@ -82,6 +82,8 @@ MaterialApp(
 )
 ```
 
+While the `copyWith` method creates a copy of text theme but with the given fields replaced with the new values, the `apply` method creates a copy of text theme but with the given field replaced in **each** of the individual text styles.
+
 It's worth mentioning that by default, the `ThemeData` object already defines an instance of `TextTheme` with either dark or light glyphs depending on the `ThemeData` brightness.
 
 Now, `TextStyle`s from above can be obtained with `Theme.of(context).textTheme` and provided to individual `Text` widgets:
@@ -115,7 +117,7 @@ It has a few fields to style individually: `size`, `color`. And the same fields 
 MaterialApp(
   theme: ThemeData.light().copyWith(
     iconTheme: const IconThemeData(
-      color: Colors.amber,
+      color: Colors.orange,
       size: 36.0,
     ),
   ),

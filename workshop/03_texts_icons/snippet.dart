@@ -10,7 +10,10 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light().copyWith(),
+      theme: ThemeData.light().copyWith(
+        // TODO 1: Provide and customize value for textTheme field
+        // TODO 2: Provide value for iconTheme field
+      ),
       home: const ExamplePage(),
     );
   }

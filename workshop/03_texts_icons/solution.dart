@@ -26,7 +26,7 @@ class ExampleApp extends StatelessWidget {
               ),
             ),
         iconTheme: const IconThemeData(
-          color: Colors.amber,
+          color: Colors.orange,
           size: 36.0,
         ),
       ),
