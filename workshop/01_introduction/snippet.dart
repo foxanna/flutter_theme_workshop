@@ -25,6 +25,7 @@ class ExamplePage extends StatelessWidget {
         title: const Text('Consistent design with Flutter Theme'),
       ),
       body: const Center(
+        // TODO 1: Apply a Theme widget over ExampleWidget
         child: ExampleWidget(),
       ),
     );

@@ -8,7 +8,7 @@ This workshop only assumes knowledge of commonly used Flutter material widgets l
 
 ## Example
 
-Let's take a look at the `ExampleWidget` on the line `34`. It consists of three similar `ElevatedButton`s placed in a `Row`:
+Let's take a look at the `ExampleWidget` on the line `35`. It consists of three similar `ElevatedButton`s placed in a `Row`:
 
 ```dart
 Row(
@@ -32,14 +32,14 @@ Row(
 
 If you run the code snippet on the right, you will see three similarly-looking blue buttons with white text. 
 
-To make UI more interesting, let's design a red button with yellow text:
+To make UI more interesting, let's design a green button with yellow text:
 
 ```dart
 ElevatedButton(
   child: const Text('example'),
   onPressed: () {},
   style: ElevatedButton.styleFrom(
-    primary: Colors.red,
+    primary: Colors.green,
     onPrimary: Colors.yellow,
   ),
 )
@@ -58,7 +58,7 @@ Theme(
   data: ThemeData(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: Colors.red,
+        primary: Colors.green,
         onPrimary: Colors.yellow,
       ),
     ),
@@ -70,8 +70,8 @@ Theme(
 )
 ```
 
-The result is the same: a red button with yellow text. But now, when placed closer to the top of the widgets tree, this `Theme` widget can help to consistently style all buttons on the screen.
+The result is the same: a green button with yellow text. But now, when placed closer to the top of the widgets tree, this `Theme` widget can help to consistently style all buttons on the screen.
 
 ## Your turn
 
-1. Apply the `Theme` from the code snippet above to the `ExampleWidget`. All three buttons should become red.
+1. Apply the `Theme` from the code snippet above to the `ExampleWidget`. All three buttons should become green.
