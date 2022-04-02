@@ -10,6 +10,8 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      // TODO 2: Provide and customize value for theme field
+      // TODO 3: Provide value for darkTheme field, specify themeMode value
       home: ExamplePage(),
     );
   }
@@ -25,11 +27,12 @@ class ExamplePage extends StatelessWidget {
         title: const Text('Consistent design with Flutter Theme'),
       ),
       body: Center(
+        // TODO 1: Remove the Theme widget
         child: Theme(
           data: ThemeData(
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(
-                primary: Colors.red,
+                primary: Colors.green,
                 onPrimary: Colors.yellow,
               ),
             ),

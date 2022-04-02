@@ -9,7 +9,7 @@ Theme(
   data: ThemeData(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: Colors.red,
+        primary: Colors.green,
         onPrimary: Colors.yellow,
       ),
     ),
@@ -49,7 +49,7 @@ Theme(
   data: ThemeData.light().copyWith(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: Colors.red,
+        primary: Colors.green,
         onPrimary: Colors.yellow,
       ),
     ),
@@ -69,7 +69,7 @@ MaterialApp(
   theme: ThemeData.light().copyWith(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: Colors.red,
+        primary: Colors.green,
         onPrimary: Colors.yellow,
       ),
     ),
@@ -78,7 +78,7 @@ MaterialApp(
 )
 ```
 
-In fact, under the hood, the `MaterialApp` widget passes the given `theme` value to the inner `Theme` widget, which wraps the application navigator.
+In fact, under the hood, the `MaterialApp` widget passes the given `theme` value to the inner `Theme` widget, which wraps all application screens.
 
 It's worth mentioning that if no `theme` value is provided to `MaterialApp` widget, the default `ThemeData.light()` is used. That is why the three buttons were blue without any customization.
 
@@ -104,5 +104,5 @@ ThemeData theme = Theme.of(context);
 ## Your turn
 
 1. Remove `Theme` widget around `ExampleWidget`.
-2. Instead, set the `theme` field of the `MaterialApp` to the predefined light theme. Customize buttons style with the help of `copyWith` method. All three buttons should remain red.
+2. Instead, set the `theme` field of the `MaterialApp` to the predefined light theme. Customize buttons style with the help of `copyWith` method. All three buttons should remain green.
 3. Set the `darkTheme` field of the `MaterialApp` to the predefined dark theme. Try different values for the `themeMode` field of the `MaterialApp`.
