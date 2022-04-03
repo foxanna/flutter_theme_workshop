@@ -8,10 +8,10 @@ This workshop only assumes knowledge of commonly used Flutter material widgets l
 
 ## Example
 
-Let's take a look at the `ExampleWidget` on the line `35`. It consists of three similar `ElevatedButton`s placed in a `Row`:
+Let's take a look at the `ExampleWidget` on the line `35`. It consists of three similar `ElevatedButton`s placed in a `Column`:
 
 ```dart
-Row(
+Column(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   children: [
     ElevatedButton(
