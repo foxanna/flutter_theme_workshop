@@ -29,8 +29,11 @@ class ExamplePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Consistent design with Flutter Theme'),
       ),
-      body: const Center(
-        child: ExampleWidget(),
+      body: const Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Center(
+          child: ExampleWidget(),
+        ),
       ),
     );
   }
