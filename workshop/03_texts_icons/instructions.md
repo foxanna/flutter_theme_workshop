@@ -4,7 +4,7 @@ This and next workshop steps are dedicated to customizing some of the most used 
 
 Texts and icons are in the heart of any application UX, giving users context of where they are and how to solve their tasks. 
 
-## Text
+## Text widget
 
 The simplest `Text` widget usage looks like:
 
@@ -103,7 +103,7 @@ Text('example')
 
 In fact, providing global `TextTheme` is also a way to implicitly customize some other widgets. For example, `ElevatedButton`, `TextButton`, and `OutlinedButton` widgets by default use `labelLarge` text style, `titleLarge` style is used for `AlertDialog.title` and `AppBar.title`, etc.
 
-## Icon
+## Icon widget
 
 The simplest `Icon` widget usage looks like:
 
