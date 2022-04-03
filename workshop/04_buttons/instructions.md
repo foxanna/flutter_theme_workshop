@@ -1,6 +1,6 @@
 # Styling buttons
 
-## ElevatedButton
+## ElevatedButton widget
 
 Earlier we saw how to customize some `ElevatedButton` style properties. `ElevatedButtonThemeData` object is created out of a `ButtonStyle`, and is provided to the global `ThemeData` configuration:
 
@@ -72,7 +72,7 @@ ButtonStyle(
 )
 ```
 
-## OutlinedButton
+## OutlinedButton widget
 
 Styling of the `OutlinedButton` is very similar to `ElevatedButton`. The `ThemeData` object exposes `outlinedButtonTheme` field of type `OutlinedButtonThemeData`, which is created out of a `ButtonStyle` object. Similarly, there is a static convenience method `OutlinedButton.styleFrom` that constructs an outlined button style from simple values:
 
@@ -106,7 +106,7 @@ ButtonStyle(
 ),
 ```
 
-## TextButton
+## TextButton widget
 
 Everything mentioned above is valid for customizing `TextButton` style. The `ThemeData` object exposes `textButtonTheme` field of type `TextButtonThemeData`:
 
