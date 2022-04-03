@@ -6,9 +6,19 @@ Welcome to the _**Consistent design with Flutter Theme**_ workshop by [Anna Leus
 
 This workshop only assumes knowledge of commonly used Flutter material widgets like `Text`, `ElevatedButton`, `TextField`, etc., so everyone is welcomed!
 
+## Contents
+
+>Step 1. Introduction  
+>Step 2. ThemeData  
+>Step 3. Styling texts and icons  
+>Step 4. Styling buttons  
+>Step 5. Styling inputs  
+>Step 6. Styling screens  
+>Step 7. Conclusion
+
 ## Example
 
-Let's take a look at the `ExampleWidget` on the line `35`. It consists of three similar `ElevatedButton`s placed in a `Column`:
+Let's take a look at the `ExampleWidget` on the line `38`. It consists of three similar `ElevatedButton`s placed in a `Column`:
 
 ```dart
 Column(

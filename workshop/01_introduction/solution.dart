@@ -24,17 +24,20 @@ class ExamplePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Consistent design with Flutter Theme'),
       ),
-      body: Center(
-        child: Theme(
-          data: ThemeData(
-            elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ElevatedButton.styleFrom(
-                primary: Colors.green,
-                onPrimary: Colors.yellow,
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Center(
+          child: Theme(
+            data: ThemeData(
+              elevatedButtonTheme: ElevatedButtonThemeData(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green,
+                  onPrimary: Colors.yellow,
+                ),
               ),
             ),
+            child: const ExampleWidget(),
           ),
-          child: const ExampleWidget(),
         ),
       ),
     );
