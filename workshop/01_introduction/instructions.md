@@ -57,7 +57,7 @@ ElevatedButton(
 
 To make this styling consistent across the application, such a style should be applied to every button, which would lead to code duplication. There are of course ways around it, like creating extensions or custom buttons. But we are here to talk about effortless UI consistency, which can be achieved with the `Theme` widget.
 
-## Theme
+## Theme widget
 
 The `Theme` widget applies a given `ThemeData`, which describes the colors and typographic choices of an application, to descendant widgets. 
 
