@@ -47,12 +47,11 @@ To make UI more interesting, let's design a green button with yellow text:
 
 ```dart
 ElevatedButton(
-  child: const Text('example'),
-  onPressed: () {},
   style: ElevatedButton.styleFrom(
     primary: Colors.green,
     onPrimary: Colors.yellow,
   ),
+  ...
 )
 ```
 
@@ -74,10 +73,7 @@ Theme(
       ),
     ),
   ),
-  child: ElevatedButton(
-    child: const Text('example'),
-    onPressed: () {},
-  ),
+  child: ElevatedButton(...),
 )
 ```
 
