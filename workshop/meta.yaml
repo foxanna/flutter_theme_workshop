@@ -13,3 +13,6 @@ steps:
   - name: Styling buttons
     directory: 04_buttons
     has_solution: true
+  - name: Styling inputs
+    directory: 05_inputs
+    has_solution: true
