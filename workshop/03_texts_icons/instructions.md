@@ -31,30 +31,36 @@ Instead of configuring individual `Text` widget styles, the consistent design ca
 
 ```dart
 MaterialApp(
-  theme: ThemeData.light().copyWith(
-    textTheme: TextTheme(
-      displayLarge: TextStyle(...),
-      displayMedium: TextStyle(...),
-      displaySmall: TextStyle(...),
-      headlineLarge: TextStyle(...),
-      headlineMedium: TextStyle(...),
-      headlineSmall: TextStyle(...),
-      titleLarge: TextStyle(...),
-      titleMedium: TextStyle(...),
-      titleSmall: TextStyle(...),
-      bodyLarge: TextStyle(...),
-      bodyMedium: TextStyle(...),
-      bodySmall: TextStyle(...),
-      labelLarge: TextStyle(...),
-      labelMedium: TextStyle(...),
-      labelSmall: TextStyle(...),
-    ),
+  theme: ThemeData(
+    textTheme: TextTheme(...),
   ),
-  home: const ExamplePage(),
+  ...
 )
 ```
 
-Defining all `TextStyle` fields of `TextTheme` is unnecessary. As with `ThemeData` object, there are predefined `TextTheme` instances which implement the typography styles in the material design specification:
+The `TextTheme` allows defining the following text styles:
+
+```dart
+TextTheme(
+  displayLarge: TextStyle(...),
+  displayMedium: TextStyle(...),
+  displaySmall: TextStyle(...),
+  headlineLarge: TextStyle(...),
+  headlineMedium: TextStyle(...),
+  headlineSmall: TextStyle(...),
+  titleLarge: TextStyle(...),
+  titleMedium: TextStyle(...),
+  titleSmall: TextStyle(...),
+  bodyLarge: TextStyle(...),
+  bodyMedium: TextStyle(...),
+  bodySmall: TextStyle(...),
+  labelLarge: TextStyle(...),
+  labelMedium: TextStyle(...),
+  labelSmall: TextStyle(...),
+)
+```
+
+However, describing all `TextStyle` fields of `TextTheme` is unnecessary. As with the `ThemeData` object, there are predefined `TextTheme` instances that implement the typography styles in the material design specification:
 
 * `Typography().black` - a material design text theme with dark glyphs 
 * `Typography().white` - a material design text theme with light glyphs
@@ -62,27 +68,24 @@ Defining all `TextStyle` fields of `TextTheme` is unnecessary. As with `ThemeDat
 These should be used as a starting point and further customized with `copyWith` or `apply` methods:
 
 ```dart
-MaterialApp(
-  theme: ThemeData.light().copyWith(
-    textTheme: Typography().black
-        .apply(
-          displayColor: Colors.greenAccent,
-          bodyColor: Colors.green,
-        )
-        .copyWith(
-          displayLarge: TextStyle(
-            color: Colors.red,
-            fontSize: 18.0,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 0.8,
-          ),
-        ),
-  ),
-  home: const ExamplePage(),
+ThemeData(
+  textTheme: Typography().black
+    .apply(
+      displayColor: Colors.greenAccent,
+      bodyColor: Colors.green,
+    )
+    .copyWith(
+      displayLarge: TextStyle(
+        color: Colors.red,
+        fontSize: 18.0,
+        fontWeight: FontWeight.bold,
+        letterSpacing: 0.8,
+      ),
+    ),
 )
 ```
 
-While the `copyWith` method creates a copy of text theme but with the given fields replaced with the new values, the `apply` method creates a copy of text theme but with the given field replaced in **each** of the individual text styles.
+While the `copyWith` method creates a copy of this text theme but with the given fields replaced with the new values, the `apply` method creates a copy of this text theme but with the given field replaced in **each** of the individual text styles.
 
 It's worth mentioning that by default, the `ThemeData` object already defines an instance of `TextTheme` with either dark or light glyphs depending on the `ThemeData` brightness.
 
@@ -95,10 +98,10 @@ Text(
 )
 ```
 
-If no explicit style is provided to a `Text` widget, it implicitly uses `bodyMedium` style:
+If no explicit style is provided to a `Text` widget, it implicitly uses the `bodyMedium` style:
 
 ```dart
-Text('example')
+Text('bodyMedium')
 ```
 
 In fact, providing global `TextTheme` is also a way to implicitly customize some other widgets. For example, `ElevatedButton`, `TextButton`, and `OutlinedButton` widgets by default use `labelLarge` text style, `titleLarge` style is used for `AlertDialog.title` and `AppBar.title`, etc.
@@ -115,13 +118,13 @@ It has a few fields to style individually: `size`, `color`. And the same fields 
 
 ```dart
 MaterialApp(
-  theme: ThemeData.light().copyWith(
-    iconTheme: const IconThemeData(
+  theme: ThemeData(
+    iconTheme: IconThemeData(
       color: Colors.orange,
       size: 36.0,
     ),
   ),
-  home: const ExamplePage(),
+  ...
 )
 ```
 

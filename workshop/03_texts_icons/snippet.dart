@@ -48,7 +48,8 @@ class ExampleWidget extends StatelessWidget {
       children: [
         const Icon(Icons.account_circle),
         Text('displayLarge', style: Theme.of(context).textTheme.displayLarge),
-        Text('bodyMedium', style: Theme.of(context).textTheme.bodyMedium),
+        Text('explicit bodyMedium', style: Theme.of(context).textTheme.bodyMedium),
+        const Text('implicit bodyMedium'),
         Text('labelSmall', style: Theme.of(context).textTheme.labelSmall),
       ],
     );
