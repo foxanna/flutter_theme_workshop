@@ -47,14 +47,9 @@ They can be used as a basis for a good application design, and can be further cu
 ```dart
 Theme(
   data: ThemeData.light().copyWith(
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.green,
-        onPrimary: Colors.yellow,
-      ),
-    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(...),
   ),
-  child: const ExampleWidget(),
+  ...
 )
 ```
 
@@ -67,12 +62,7 @@ To make the styling consistent across the entire application, the  `MaterialApp`
 ```dart
 MaterialApp(
   theme: ThemeData.light().copyWith(
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.green,
-        onPrimary: Colors.yellow,
-      ),
-    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(...),
   ),
   home: const ExamplePage(),
 )
@@ -86,16 +76,15 @@ Additionally, the `MaterialApp` widget exposes `darkTheme` field, which is used 
 
 ```dart
 MaterialApp(
-  theme: ...,
   darkTheme: ThemeData.dark(),
   themeMode: ThemeMode.dark,
-  home: const ExamplePage(),
+  ...
 )
 ```
 
 ## Accessing ThemeData
 
-No matter how a `ThemeData` was provided, either through `Theme` widget or through `MaterialApp`, it can be accessed from widgets below with:
+No matter how a `ThemeData` was provided, either through the `Theme` widget or through the `MaterialApp`, it can be accessed from the widgets below with:
 
 ```dart
 ThemeData theme = Theme.of(context);
