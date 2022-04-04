@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the _**Consistent design with Flutter Theme**_ workshop by [Anna Leushchenko 👩‍💻💙📱🇺🇦](https://github.com/foxanna)!
+Welcome to the ***Consistent design with Flutter Theme*** workshop by [*Anna Leushchenko* 👩‍💻💙📱🇺🇦](https://github.com/foxanna)!
 
 >Consistency is a winning strategy for a good application UI. And Flutter developers don’t have to be professional designers to achieve it. As usual, there is a widget for that - `Theme`! Find more details about effortless consistent Flutter application design in this workshop.
 
@@ -8,17 +8,18 @@ This workshop only assumes knowledge of commonly used Flutter material widgets l
 
 ## Contents
 
->Step 1. Introduction  
->Step 2. ThemeData  
->Step 3. Styling texts and icons  
->Step 4. Styling buttons  
->Step 5. Styling inputs  
->Step 6. Styling screens  
->Step 7. Conclusion
+* Step 1. Introduction  
+* Step 2. ThemeData  
+* Step 3. Styling texts and icons  
+* Step 4. Styling buttons  
+* Step 5. Styling inputs  
+* Step 6. Styling screens  
+* Step 7. Conclusion
 
-## Example
 
-Let's take a look at the `ExampleWidget` on the line `38`. It consists of three similar `ElevatedButton`s placed in a `Column`:
+## Let's go!
+
+Take a look at the `ExampleWidget` on the line `38` on the right. It consists of three similar `ElevatedButton`s placed in a `Column`:
 
 ```dart
 Column(
