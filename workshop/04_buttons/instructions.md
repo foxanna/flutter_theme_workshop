@@ -6,7 +6,7 @@ Earlier we saw how to customize some `ElevatedButton` style properties. `Elevate
 
 ```dart
 MaterialApp(
-  theme: ThemeData.light().copyWith(
+  theme: ThemeData(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         primary: Colors.green,
@@ -14,7 +14,7 @@ MaterialApp(
       ),
     ),
   ),
-  home: const ExamplePage(),
+  ...
 )
 ```
 
@@ -27,7 +27,7 @@ ButtonStyle(
 )
 ```
 
-Both `backgroundColor` and `foregroundColor` fields are of type `MaterialStateProperty`, which represent values that depend on a widget's [material state](https://material.io/design/interaction/states.html). The `.all` constructor creates a `MaterialStateProperty` that resolves to the same value for any states set.
+Both `backgroundColor` and `foregroundColor` fields are of type `MaterialStateProperty`, which represent values that depend on a widget's [*material state*](https://material.io/design/interaction/states.html). The `.all` constructor creates a `MaterialStateProperty` that resolves to the same value for any states set.
 
 Now let's say the button should turn blue when hovered, and orange when pressed. For that, we'll use the `overlayColor` field of the same type `MaterialStateProperty`. This time, we are interested in different behavior depending on the button state. For that we'll use the `.resolveWith` constructor:
 
@@ -41,7 +41,7 @@ ButtonStyle(
           return Colors.orange;
         return null;
     }
-  )
+  ),
 )
 ```
 
@@ -68,7 +68,7 @@ ButtonStyle(
     (states) => states.contains(MaterialState.pressed)
       ? TextStyle(fontStyle: FontStyle.italic)
       : null
-  )
+  ),
 )
 ```
 
@@ -78,15 +78,15 @@ Styling of the `OutlinedButton` is very similar to `ElevatedButton`. The `ThemeD
 
 ```dart
 MaterialApp(
-  theme: ThemeData.light().copyWith(
+  theme: ThemeData(
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         primary: Colors.red,
         side: const BorderSide(color: Colors.red, width: 2),
-      )
-    )
+      ),
+    ),
   ),
-  home: const ExamplePage(),
+  ...
 )
 ```
 
@@ -112,14 +112,14 @@ Everything mentioned above is valid for customizing `TextButton` style. The `The
 
 ```dart
 MaterialApp(
-  theme: ThemeData.light().copyWith(
+  theme: ThemeData(
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         primary: Colors.orange,
       ),
     ),
   ),
-  home: const ExamplePage(),
+  ...
 )
 ```
 
