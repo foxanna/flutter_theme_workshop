@@ -16,6 +16,10 @@ This workshop only assumes knowledge of commonly used Flutter material widgets l
 * Step 6. Styling screens  
 * Step 7. Conclusion
 
+## About author
+
+[*Anna Leushchenko* 👩‍💻💙📱🇺🇦](https://github.com/foxanna) is a mobile development expert, passionate about quality software, focused on Flutter. Anna is a Google Developer Expert in Dart and Flutter, conference speaker and tech writer, mentor and OSS contributor. Senior Staff Mobile Engineer at [*Tide*](https://www.tide.co/careers/).
+
 
 ## Let's go!
 
