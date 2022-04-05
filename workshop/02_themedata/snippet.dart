@@ -34,8 +34,8 @@ class ExamplePage extends StatelessWidget {
             data: ThemeData(
               elevatedButtonTheme: ElevatedButtonThemeData(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.green,
-                  onPrimary: Colors.yellow,
+                  primary: Colors.lime,
+                  onPrimary: Colors.blue,
                 ),
               ),
             ),

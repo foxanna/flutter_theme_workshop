@@ -10,11 +10,12 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light().copyWith(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            primary: Colors.green,
-            onPrimary: Colors.yellow,
+            primary: Colors.lime,
+            onPrimary: Colors.blue,
           ),
         ),
       ),

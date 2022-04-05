@@ -9,8 +9,8 @@ Theme(
   data: ThemeData(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: Colors.green,
-        onPrimary: Colors.yellow,
+        primary: Colors.lime,
+        onPrimary: Colors.blue,
       ),
     ),
   ),
@@ -53,15 +53,46 @@ Theme(
 )
 ```
 
+Another pretty easy way to get a `ThemeData` object with a well-made collection of material styles is to provide the `colorSchemeSeed` field and the `brightness`. A generated color scheme will be based on the tones of `colorSchemeSeed` color and all of its contrasting color will meet accessibility guidelines for readability:
+
+```dart
+Theme(
+  data: ThemeData(
+    colorSchemeSeed: Colors.green, 
+    brightness: Brightness.light,
+  ),
+  ...
+)
+```
+
+The `Brightness.light` is the default one if the `brightness` field value was not specified.
+
+If you want to customize a generated color scheme, you can use
+`ColorScheme.fromSeed` directly and then override any colors that need to be replaced with `copyWith` method:
+
+```dart
+Theme(
+  data: ThemeData(
+    colorScheme: ColorScheme.fromSeed(seedColor: Colors.green)
+      .copyWith(
+        onPrimary: Colors.yellow,
+        ...
+      ),
+  ),
+  ...
+)
+```
+
 ## Global ThemeData
 
-In the example above the `ThemeData` configuration is applied only to a part of the widget tree wrapped with the `Theme` widget. Other parts of the screen or other screens are not styled in the same way. 
+In the previous workshop step the `ThemeData` configuration was applied only to a part of the widget tree wrapped with the `Theme` widget. Other parts of the screen or other screens were not styled in the same way. 
 
 To make the styling consistent across the entire application, the  `MaterialApp` widget exposes a special `theme` field of `ThemeData` type. When set, the given `ThemeData` configuration is applied to all application screens:
 
 ```dart
 MaterialApp(
-  theme: ThemeData.light().copyWith(
+  theme: ThemeData(
+    colorSchemeSeed: Colors.green,
     elevatedButtonTheme: ElevatedButtonThemeData(...),
   ),
   home: const ExamplePage(),
@@ -93,5 +124,5 @@ ThemeData theme = Theme.of(context);
 ## Your turn
 
 1. Remove `Theme` widget around `ExampleWidget`.
-2. Instead, set the `theme` field of the `MaterialApp` to the predefined light theme. Customize buttons style with the help of `copyWith` method. All three buttons should remain green.
+2. Instead, set the `theme` field of the `MaterialApp` to the  light theme created with `colorSchemeSeed` field, customize buttons style. All three buttons should remain lime.
 3. Set the `darkTheme` field of the `MaterialApp` to the predefined dark theme. Try different values for the `themeMode` field of the `MaterialApp`.
