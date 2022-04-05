@@ -43,13 +43,13 @@ Column(
 
 If you run the code snippet on the right, you will see three similarly-looking blue buttons with white text. 
 
-To make UI more interesting, let's design a green button with yellow text:
+To make UI more interesting, let's design a lime button with blue text:
 
 ```dart
 ElevatedButton(
   style: ElevatedButton.styleFrom(
-    primary: Colors.green,
-    onPrimary: Colors.yellow,
+    primary: Colors.lime,
+    onPrimary: Colors.blue,
   ),
   ...
 )
@@ -68,8 +68,8 @@ Theme(
   data: ThemeData(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: Colors.green,
-        onPrimary: Colors.yellow,
+        primary: Colors.lime,
+        onPrimary: Colors.blue,
       ),
     ),
   ),
@@ -77,8 +77,8 @@ Theme(
 )
 ```
 
-The result is the same: a green button with yellow text. But now, when placed closer to the top of the widgets tree, this `Theme` widget can help to consistently style all buttons on the screen.
+The result is the same: a lime button with blue text. But now, when placed closer to the top of the widgets tree, this `Theme` widget can help to consistently style all buttons on the screen.
 
 ## Your turn
 
-1. Apply the `Theme` from the code snippet above to the `ExampleWidget`. All three buttons should become green.
+1. Apply the `Theme` from the code snippet above to the `ExampleWidget`. All three buttons should become lime.
