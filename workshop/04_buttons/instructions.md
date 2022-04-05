@@ -9,8 +9,8 @@ MaterialApp(
   theme: ThemeData(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: Colors.green,
-        onPrimary: Colors.yellow,
+        primary: Colors.lime,
+        onPrimary: Colors.blue,
       ),
     ),
   ),
@@ -22,23 +22,23 @@ The `ButtonStyle` is the object that accommodates all button style settings. The
 
 ```dart
 ButtonStyle(
-  backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
-  foregroundColor: MaterialStateProperty.all<Color>(Colors.yellow),
+  backgroundColor: MaterialStateProperty.all<Color>(Colors.lime),
+  foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
 )
 ```
 
 Both `backgroundColor` and `foregroundColor` fields are of type `MaterialStateProperty`, which represent values that depend on a widget's [*material state*](https://material.io/design/interaction/states.html). The `.all` constructor creates a `MaterialStateProperty` that resolves to the same value for any states set.
 
-Now let's say the button should turn blue when hovered, and orange when pressed. For that, we'll use the `overlayColor` field of the same type `MaterialStateProperty`. This time, we are interested in different behavior depending on the button state. For that we'll use the `.resolveWith` constructor:
+Now let's say the button should be of different shades of green when hovered and pressed. For that, we'll use the `overlayColor` field of the same type `MaterialStateProperty`. This time, we are interested in different behavior depending on the button state. For that we'll use the `.resolveWith` constructor:
 
 ```dart
 ButtonStyle(
   overlayColor: MaterialStateProperty.resolveWith<Color?>(
     (Set<MaterialState> states) {
         if (states.contains(MaterialState.hovered))
-          return Colors.blue;
+          return Colors.greenAccent;
         if (states.contains(MaterialState.pressed))
-          return Colors.orange;
+          return Colors.lightGreenAccent;
         return null;
     }
   ),
@@ -60,13 +60,13 @@ enum MaterialState {
 }
 ```
 
-In the previous step of this workshop, it was mentioned that `ElevatedButton`, `TextButton`, and `OutlinedButton` widgets' text style can be customized globally by providing a value for `labelLarge` field of the global `TextTheme` object. In addition, `ButtonStyle` object exposes `textStyle` field for more granular customization. For example, let's change the font style to italic when the button is in a pressed state:
+In the previous step of this workshop, it was mentioned that `ElevatedButton`, `TextButton`, and `OutlinedButton` widgets' text style can be customized globally by providing a value for `labelLarge` field of the global `TextTheme` object. In addition, `ButtonStyle` object exposes `textStyle` field for more granular customization. For example, let's change the font weight to bold when the button is in a pressed state:
 
 ```dart
 ButtonStyle(
   textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
     (states) => states.contains(MaterialState.pressed)
-      ? TextStyle(fontStyle: FontStyle.italic)
+      ? TextStyle(fontWeight: FontWeight.bold)
       : null
   ),
 )
@@ -81,8 +81,8 @@ MaterialApp(
   theme: ThemeData(
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        primary: Colors.red,
-        side: const BorderSide(color: Colors.red, width: 2),
+        primary: Colors.green,
+        side: const BorderSide(color: Colors.green, width: 2),
       ),
     ),
   ),
@@ -94,13 +94,13 @@ And similarly, a `ButtonStyle` object can be created with the default `ButtonSty
 
 ```dart
 ButtonStyle(
-  foregroundColor: MaterialStateProperty.all<Color>(Colors.red),
-  side: MaterialStateProperty.all<BorderSide>(const BorderSide(color: Colors.red, width: 2)),
+  foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
+  side: MaterialStateProperty.all<BorderSide>(const BorderSide(color: Colors.green, width: 2)),
   overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
     if (states.contains(MaterialState.hovered)) 
-      return Colors.yellow.withOpacity(0.2);
+      return Colors.lime.withOpacity(0.2);
     if (states.contains(MaterialState.pressed)) 
-      return Colors.yellow;
+      return Colors.lime.withOpacity(0.4);
     return null;
   }),
 ),
@@ -115,7 +115,7 @@ MaterialApp(
   theme: ThemeData(
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
-        primary: Colors.orange,
+        primary: Colors.lightGreen,
       ),
     ),
   ),

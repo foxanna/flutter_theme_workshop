@@ -10,7 +10,8 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light().copyWith(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         // TODO 1: Provide value for elevatedButtonTheme field using ButtonStyle() constructor
         // TODO 2: Provide value for outlinedButtonTheme field using ButtonStyle() constructor
         // TODO 3: Provide value for textButtonTheme field using OutlinedButton.styleFrom() method
