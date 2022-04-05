@@ -68,16 +68,15 @@ Theme(
 The `Brightness.light` is the default one if the `brightness` field value was not specified.
 
 If you want to customize a generated color scheme, you can use
-`ColorScheme.fromSeed` directly and then override any colors that need to be replaced with `copyWith` method:
+`ColorScheme.fromSeed` and then override any colors that need to be replaced directly or with `copyWith` method:
 
 ```dart
 Theme(
   data: ThemeData(
-    colorScheme: ColorScheme.fromSeed(seedColor: Colors.green)
-      .copyWith(
-        onPrimary: Colors.yellow,
-        ...
-      ),
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: Colors.green,
+      onPrimary: Colors.yellow,
+    ).copyWith(...),
   ),
   ...
 )
