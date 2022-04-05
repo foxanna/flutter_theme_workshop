@@ -76,7 +76,7 @@ ThemeData(
     )
     .copyWith(
       displayLarge: TextStyle(
-        color: Colors.red,
+        color: Colors.lightGreen,
         fontSize: 18.0,
         fontWeight: FontWeight.bold,
         letterSpacing: 0.8,
@@ -120,7 +120,7 @@ It has a few fields to style individually: `size`, `color`. And the same fields 
 MaterialApp(
   theme: ThemeData(
     iconTheme: IconThemeData(
-      color: Colors.orange,
+      color: Colors.lime,
       size: 36.0,
     ),
   ),

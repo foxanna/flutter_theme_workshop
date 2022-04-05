@@ -10,23 +10,23 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light().copyWith(
-        textTheme: Typography()
-            .black
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        textTheme: Typography().black
             .apply(
               displayColor: Colors.greenAccent,
               bodyColor: Colors.green,
             )
             .copyWith(
               displayLarge: const TextStyle(
-                color: Colors.red,
+                color: Colors.lightGreen,
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 0.8,
               ),
             ),
         iconTheme: const IconThemeData(
-          color: Colors.orange,
+          color: Colors.lime,
           size: 36.0,
         ),
       ),
