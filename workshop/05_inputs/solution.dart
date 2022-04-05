@@ -10,30 +10,31 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.light().copyWith(
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         inputDecorationTheme: const InputDecorationTheme(
           errorStyle: TextStyle(
             fontStyle: FontStyle.italic,
           ),
           floatingLabelStyle: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.orange,
+            color: Colors.lightGreen,
           ),
           hintStyle: TextStyle(
             fontStyle: FontStyle.italic,
             fontSize: 14.0,
           ),
-          suffixIconColor: Colors.green,
-          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green)),
-          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green, width: 2)),
+          suffixIconColor: Colors.greenAccent,
+          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.lightGreen)),
+          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.lightGreen, width: 2)),
           errorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
           focusedErrorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.red, width: 2)),
-          disabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.yellow)),
+          disabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
         ),
         textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: Colors.orange,
-          selectionColor: Colors.yellow,
-          selectionHandleColor: Colors.orange,
+          cursorColor: Colors.lightGreen,
+          selectionColor: Colors.lime,
+          selectionHandleColor: Colors.lightGreen,
         ),
       ),
       home: const ExamplePage(),

@@ -22,13 +22,13 @@ InputDecorationTheme(
   ),
   floatingLabelStyle: TextStyle(
     fontWeight: FontWeight.bold,
-    color: Colors.orange,
+    color: Colors.lightGreen,
   ),
   hintStyle: TextStyle(
     fontStyle: FontStyle.italic,
     fontSize: 14.0,
   ),
-  suffixIconColor: Colors.green,
+  suffixIconColor: Colors.greenAccent,
   ...
 )
 ```
@@ -42,16 +42,16 @@ InputDecorationTheme(
 * `disabledBorder` - the border to display when the widget is disabled and is not showing an error;
 * `border` - this property is only used when the appropriate one of the above is not specified.
 
-These values default to `UnderlineInputBorder` which draws a horizontal line at the bottom of a widget. Let's define a custom set of borders using `UnderlineInputBorder` which draws a rounded rectangle around, green when enabled, red in case of error, and yellow when disabled:
+These values default to `UnderlineInputBorder` which draws a horizontal line at the bottom of a widget. Let's define a custom set of borders using `UnderlineInputBorder` which draws a rounded rectangle around, light green when enabled, red in case of error, and grey when disabled:
 
 ```dart
 InputDecorationTheme(
   ...
-  enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green)),
-  focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.green, width: 2)),
+  enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.lightGreen)),
+  focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.lightGreen, width: 2)),
   errorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
   focusedErrorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.red, width: 2)),
-  disabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.yellow)),
+  disabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
 )
 ```
 
@@ -63,9 +63,9 @@ There is another important aspect of `TextField` behavior, which is cursor and t
 MaterialApp(
   theme: ThemeData(
     textSelectionTheme: TextSelectionThemeData(
-      cursorColor: Colors.orange,
-      selectionColor: Colors.yellow,
-      selectionHandleColor: Colors.orange,
+      cursorColor: Colors.lightGreen,
+      selectionColor: Colors.lime,
+      selectionHandleColor: Colors.lightGreen,
     ),
   ),
   ...
