@@ -16,3 +16,6 @@ steps:
   - name: Styling inputs
     directory: 05_inputs
     has_solution: true
+  - name: Styling screens
+    directory: 06_screens
+    has_solution: true
