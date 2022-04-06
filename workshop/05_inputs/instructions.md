@@ -33,6 +33,8 @@ InputDecorationTheme(
 )
 ```
 
+Additionally, text style of the hint and of the text value entered in `TextField` can be implicitly controlled by the `titleMedium` field of the `TextTheme`, error style - by `bodySmall`.
+
 `TextField` borders deserve a special attention. They are:
 
 * `enabledBorder` - the border to display when the widget is enabled and is not showing an error;
