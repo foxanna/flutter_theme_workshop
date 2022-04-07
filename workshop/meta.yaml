@@ -19,3 +19,6 @@ steps:
   - name: Styling screens
     directory: 06_screens
     has_solution: true
+  - name: Conclusion
+    directory: 07_conclusion
+    has_solution: false
