@@ -1,8 +1,6 @@
 # Styling texts and icons
 
-This and next workshop steps are dedicated to customizing some of the most used widgets.
-
-Texts and icons are in the heart of any application UX, giving users context of where they are and how to solve their tasks. 
+Though providing a `ColorScheme` is a powerful consistent way to style most of the application components, there might be the desire to tweak some widgets individually. This and the next workshop steps are dedicated to customizing some of the most used widgets.
 
 ## Text widget
 
