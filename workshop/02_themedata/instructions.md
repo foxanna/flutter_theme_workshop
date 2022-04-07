@@ -53,7 +53,10 @@ Theme(
 )
 ```
 
-Another pretty easy way to get a `ThemeData` object with a well-made collection of material styles is to provide the `colorSchemeSeed` field and the `brightness`. A generated color scheme will be based on the tones of `colorSchemeSeed` color and all of its contrasting color will meet accessibility guidelines for readability:
+The `ColorScheme` is a set of colors
+based on the [*Material spec*](https://m3.material.io/styles/color/the-color-system/color-roles) that can be used to configure the color properties of most components. It is a powerful tool to consistently customize application colors with a well-made color palette. 
+
+One way to get a `ThemeData` object initialized with a `ColorScheme` is to provide the `colorSchemeSeed` field and the `brightness`. A generated color scheme will be based on the tones of `colorSchemeSeed` color and all of its contrasting colors will meet accessibility guidelines for readability:
 
 ```dart
 Theme(
