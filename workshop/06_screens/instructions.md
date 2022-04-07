@@ -13,7 +13,7 @@ Scaffold(
 )
 ```
 
-And to apply such configuration to all `Scaffold` widgets, you have to modify `ColorScheme.background` property:
+And to apply such configuration to all `Scaffold` widgets, you have to modify `ColorScheme.background` property**:
 
 ```dart
 MaterialApp(
@@ -27,7 +27,6 @@ MaterialApp(
 )
 ```
 
-// The above would only be valid if [this issue](https://github.com/flutter/flutter/issues/101389) fix is released before the event
 
 Or, if you have been using a `colorSchemeSeed` property to create a `ColorScheme`, you can set a `scaffoldBackgroundColor` field:
 
@@ -69,5 +68,8 @@ AppBarTheme(
 
 ## Your turn
 
-1. Modify global `ColorScheme` by providing `background` field value.
+1. Modify global `ColorScheme` by providing `background` field value**.
 2. Define global `appBarTheme` using customizations given above.
+
+
+** The above would only be valid if [this issue](https://github.com/flutter/flutter/issues/101389) fix is released before the event
