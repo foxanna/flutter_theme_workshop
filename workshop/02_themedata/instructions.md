@@ -14,7 +14,7 @@ Theme(
       ),
     ),
   ),
-  child: const ExampleWidget(),
+  child: ExampleWidget(),
 )
 ```
 
@@ -97,7 +97,7 @@ MaterialApp(
     colorSchemeSeed: Colors.green,
     elevatedButtonTheme: ElevatedButtonThemeData(...),
   ),
-  home: const ExamplePage(),
+  home: ExamplePage(),
 )
 ```
 
