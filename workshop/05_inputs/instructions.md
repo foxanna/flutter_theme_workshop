@@ -35,6 +35,8 @@ InputDecorationTheme(
 
 Additionally, text style of the hint and of the text value entered in `TextField` can be implicitly controlled by the `titleMedium` field of the `TextTheme`, error style - by `bodySmall`.
 
+## TextField borders
+
 `TextField` borders deserve a special attention. They are:
 
 * `enabledBorder` - the border to display when the widget is enabled and is not showing an error;
@@ -44,7 +46,7 @@ Additionally, text style of the hint and of the text value entered in `TextField
 * `disabledBorder` - the border to display when the widget is disabled and is not showing an error;
 * `border` - this property is only used when the appropriate one of the above is not specified.
 
-These values default to `UnderlineInputBorder` which draws a horizontal line at the bottom of a widget. Let's define a custom set of borders using `UnderlineInputBorder` which draws a rounded rectangle around, light green when enabled, red in case of error, and grey when disabled:
+These values default to `UnderlineInputBorder` which draws a horizontal line at the bottom of a widget. Instead, let's define a custom set of borders using an `OutlineInputBorder` which draws a rounded rectangle around the widget: light green when enabled, red in case of error, and grey when disabled:
 
 ```dart
 InputDecorationTheme(
