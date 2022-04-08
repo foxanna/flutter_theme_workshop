@@ -20,27 +20,17 @@ This workshop only assumes knowledge of commonly used Flutter material widgets l
 
 [*Anna Leushchenko* 👩‍💻💙📱🇺🇦](https://github.com/foxanna) is a mobile development expert, passionate about quality software, focused on Flutter. Anna is a Google Developer Expert in Dart and Flutter, conference speaker and tech writer, mentor and OSS contributor. Senior Staff Mobile Engineer at [*Tide*](https://www.tide.co/careers/).
 
-
 ## Let's go!
 
-Take a look at the `ExampleWidget` on the line `38` on the right. It consists of three similar `ElevatedButton`s placed in a `Column`:
+Take a look at the `ExampleWidget` on the line `36` on the right. It consists of three similar `ElevatedButton`s placed in a `Column`:
 
 ```dart
 Column(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
   children: [
-    ElevatedButton(
-      child: const Text('first'),
-      onPressed: () {},
-    ),
-    ElevatedButton(
-      child: const Text('second'),
-      onPressed: () {},
-    ),
-    ElevatedButton(
-      child: const Text('third'),
-      onPressed: () {},
-    ),
+    ElevatedButton(child: Text('first'), onPressed: () {}),
+    ElevatedButton(child: Text('second'), onPressed: () {}),
+    ElevatedButton(child: Text('third'), onPressed: () {}),
   ],
 )
 ```
