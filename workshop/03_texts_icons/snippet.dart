@@ -1,12 +1,12 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, curly_braces_in_flow_control_structures
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const ExampleApp());
+  runApp(ExampleApp());
 }
 
 class ExampleApp extends StatelessWidget {
-  const ExampleApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,21 +15,19 @@ class ExampleApp extends StatelessWidget {
         // TODO 1: Provide and customize value for textTheme field
         // TODO 2: Provide value for iconTheme field
       ),
-      home: const ExamplePage(),
+      home: ExamplePage(),
     );
   }
 }
 
 class ExamplePage extends StatelessWidget {
-  const ExamplePage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Consistent design with Flutter Theme'),
+        title: Text('Consistent design with Flutter Theme'),
       ),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.all(20.0),
         child: Center(
           child: ExampleWidget(),
@@ -40,17 +38,15 @@ class ExamplePage extends StatelessWidget {
 }
 
 class ExampleWidget extends StatelessWidget {
-  const ExampleWidget({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        const Icon(Icons.account_circle),
+        Icon(Icons.account_circle),
         Text('displayLarge', style: Theme.of(context).textTheme.displayLarge),
         Text('explicit bodyMedium', style: Theme.of(context).textTheme.bodyMedium),
-        const Text('implicit bodyMedium'),
+        Text('implicit bodyMedium'),
         Text('labelSmall', style: Theme.of(context).textTheme.labelSmall),
       ],
     );
