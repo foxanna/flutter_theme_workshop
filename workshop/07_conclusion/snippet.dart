@@ -1,33 +1,35 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, curly_braces_in_flow_control_structures
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const ExampleApp());
+  runApp(ExampleApp());
 }
 
 class ExampleApp extends StatelessWidget {
-  const ExampleApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
-      home: const ExamplePage(),
+      home: ExamplePage(),
     );
   }
 }
 
 class ExamplePage extends StatelessWidget {
-  const ExamplePage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Consistent design with Flutter Theme'),
+        title: Text('Consistent design with Flutter Theme'),
+        actions: [
+          IconButton(icon: Icon(Icons.account_circle), onPressed: () {}),
+          IconButton(icon: Icon(Icons.email), onPressed: () {}),
+        ],
       ),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.all(20.0),
         child: Center(
           child: ExampleWidget(),
@@ -38,8 +40,6 @@ class ExamplePage extends StatelessWidget {
 }
 
 class ExampleWidget extends StatelessWidget {
-  const ExampleWidget({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -58,7 +58,7 @@ class ExampleWidget extends StatelessWidget {
             ),
           ],
         ),
-        const TextField(
+        TextField(
           decoration: InputDecoration(
             labelText: 'email',
             suffixIcon: Icon(Icons.email),
@@ -67,14 +67,8 @@ class ExampleWidget extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            TextButton(
-              onPressed: () {},
-              child: const Text('Skip'),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Register'),
-            ),
+            TextButton(child: Text('Skip'), onPressed: () {}),
+            ElevatedButton(child: Text('Register'), onPressed: () {}),
           ],
         ),
       ],
