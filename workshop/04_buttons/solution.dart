@@ -1,12 +1,12 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, curly_braces_in_flow_control_structures
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const ExampleApp());
+  runApp(ExampleApp());
 }
 
 class ExampleApp extends StatelessWidget {
-  const ExampleApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,23 +17,27 @@ class ExampleApp extends StatelessWidget {
             backgroundColor: MaterialStateProperty.all<Color>(Colors.lime),
             foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
             overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
-              if (states.contains(MaterialState.hovered)) return Colors.greenAccent;
-              if (states.contains(MaterialState.pressed)) return Colors.lightGreenAccent;
+              if (states.contains(MaterialState.hovered))
+                return Colors.greenAccent;
+              if (states.contains(MaterialState.pressed))
+                return Colors.lightGreenAccent;
               return null;
             }),
             textStyle: MaterialStateProperty.resolveWith<TextStyle?>((states) =>
-            states.contains(MaterialState.pressed)
-                ? const TextStyle(fontWeight: FontWeight.bold)
-                : null),
+                states.contains(MaterialState.pressed)
+                    ? TextStyle(fontWeight: FontWeight.bold)
+                    : null),
           ),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
             foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
-            side: MaterialStateProperty.all<BorderSide>(const BorderSide(color: Colors.green, width: 2)),
+            side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Colors.green, width: 2)),
             overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
-              if (states.contains(MaterialState.hovered)) return Colors.lime.withOpacity(0.2);
-              if (states.contains(MaterialState.pressed)) return Colors.lime.withOpacity(0.4);
+              if (states.contains(MaterialState.hovered))
+                return Colors.lime.withOpacity(0.2);
+              if (states.contains(MaterialState.pressed))
+                return Colors.lime.withOpacity(0.4);
               return null;
             }),
           ),
@@ -44,21 +48,19 @@ class ExampleApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const ExamplePage(),
+      home: ExamplePage(),
     );
   }
 }
 
 class ExamplePage extends StatelessWidget {
-  const ExamplePage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Consistent design with Flutter Theme'),
+        title: Text('Consistent design with Flutter Theme'),
       ),
-      body: const Padding(
+      body: Padding(
         padding: EdgeInsets.all(20.0),
         child: Center(
           child: ExampleWidget(),
@@ -69,25 +71,14 @@ class ExamplePage extends StatelessWidget {
 }
 
 class ExampleWidget extends StatelessWidget {
-  const ExampleWidget({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        ElevatedButton(
-          onPressed: () {},
-          child: const Text('ElevatedButton'),
-        ),
-        OutlinedButton(
-          onPressed: () {},
-          child: const Text('OutlinedButton'),
-        ),
-        TextButton(
-          onPressed: () {},
-          child: const Text('TextButton'),
-        ),
+        ElevatedButton(child: Text('ElevatedButton'), onPressed: () {}),
+        OutlinedButton(child: Text('OutlinedButton'), onPressed: () {}),
+        TextButton(child: Text('TextButton'), onPressed: () {}),
       ],
     );
   }

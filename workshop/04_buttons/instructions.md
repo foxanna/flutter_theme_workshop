@@ -82,7 +82,7 @@ MaterialApp(
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         primary: Colors.green,
-        side: const BorderSide(color: Colors.green, width: 2),
+        side: BorderSide(color: Colors.green, width: 2),
       ),
     ),
   ),
@@ -95,7 +95,7 @@ And similarly, a `ButtonStyle` object can be created with the default `ButtonSty
 ```dart
 ButtonStyle(
   foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
-  side: MaterialStateProperty.all<BorderSide>(const BorderSide(color: Colors.green, width: 2)),
+  side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Colors.green, width: 2)),
   overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
     if (states.contains(MaterialState.hovered)) 
       return Colors.lime.withOpacity(0.2);
