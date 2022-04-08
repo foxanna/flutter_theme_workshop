@@ -28,6 +28,10 @@ class ExamplePage extends StatelessWidget {
         padding: EdgeInsets.all(20.0),
         child: Center(
           // TODO 1: Remove the Theme widget
+
+          // Tip: Once again, you can place your cursor over the "Theme" widget below
+          // and hit alt + enter on Windows/Linux or option + return on Mac.
+          // Then, select "Remove this widget" from the dropdown menu that appears.
           child: Theme(
             data: ThemeData(
               elevatedButtonTheme: ElevatedButtonThemeData(

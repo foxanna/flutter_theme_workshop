@@ -53,10 +53,12 @@ Theme(
 )
 ```
 
+## Generating ThemeData
+
 The `ColorScheme` is a set of colors
 based on the [*Material spec*](https://m3.material.io/styles/color/the-color-system/color-roles) that can be used to configure the color properties of most components. It is a powerful tool to consistently customize application colors with a well-made color palette. 
 
-One way to get a `ThemeData` object initialized with a `ColorScheme` is to provide the `colorSchemeSeed` field and the `brightness`. A generated color scheme will be based on the tones of `colorSchemeSeed` color and all of its contrasting colors will meet accessibility guidelines for readability:
+One way to initialize a `ThemeData` object with a `ColorScheme` is to provide the `colorSchemeSeed` field and the `brightness`. A generated color scheme will be based on the tones of `colorSchemeSeed` color and all of its contrasting colors will meet accessibility guidelines for readability:
 
 ```dart
 Theme(
@@ -104,6 +106,8 @@ MaterialApp(
 In fact, under the hood, the `MaterialApp` widget passes the given `theme` value to the inner `Theme` widget, which wraps all application screens.
 
 It's worth mentioning that if no `theme` value is provided to `MaterialApp` widget, the default `ThemeData.light()` is used. That is why the three buttons were blue without any customization.
+
+## Dark theme
 
 Additionally, the `MaterialApp` widget exposes `darkTheme` field, which is used to provide a dark version of the user interface. `themeMode` field controls which theme is used if a `darkTheme` is provided:
 
