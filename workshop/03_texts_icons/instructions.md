@@ -104,6 +104,8 @@ Text('bodyMedium')
 
 In fact, providing global `TextTheme` is also a way to implicitly customize some other widgets. For example, `ElevatedButton`, `TextButton`, and `OutlinedButton` widgets by default use `labelLarge` text style, `titleLarge` style is used for `AlertDialog.title` and `AppBar.title`, etc.
 
+<!-- This section feels a little out of place here, and unrelated to the rest of the content that proceeds it. Maybe move it to a short step by itself? -->
+
 ## Icon widget
 
 The simplest `Icon` widget usage looks like:

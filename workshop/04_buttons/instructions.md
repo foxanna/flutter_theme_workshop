@@ -33,6 +33,11 @@ Now let's say the button should be of different shades of green when hovered and
 
 ```dart
 ButtonStyle(
+  // I was being a bit lazy and copied this section over. When I did, I got the warning:
+  //
+  // "DO use curly braces for all flow control structures."
+  //
+  // Might be good to disable that lint rule for the file or restructure this to include curly braces.
   overlayColor: MaterialStateProperty.resolveWith<Color?>(
     (Set<MaterialState> states) {
         if (states.contains(MaterialState.hovered))
