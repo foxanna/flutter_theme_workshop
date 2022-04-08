@@ -26,6 +26,10 @@ class ExamplePage extends StatelessWidget {
         padding: EdgeInsets.all(20.0),
         child: Center(
           // TODO 1: Apply a Theme widget over ExampleWidget
+
+          // Tip: Place your cursor over the ExampleWidget text below and hit
+          // alt + enter on Windows/Linux or option + return on Mac. Then,
+          // select "Wrap with widget..." from the dropdown menu that appears.
           child: ExampleWidget(),
         ),
       ),
