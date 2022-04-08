@@ -22,7 +22,7 @@ This workshop only assumes knowledge of commonly used Flutter material widgets l
 
 ## Let's go!
 
-Take a look at the `ExampleWidget` on the line `36` on the right. It consists of three similar `ElevatedButton`s placed in a `Column`:
+Take a look at the `ExampleWidget` on the line `40` on the right. It consists of three similar `ElevatedButton`s placed in a `Column`:
 
 ```dart
 Column(
