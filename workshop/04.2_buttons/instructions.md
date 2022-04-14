@@ -1,6 +1,6 @@
 # Styling buttons
 
-## OutlinedButton widget
+## OutlinedButton style
 
 Styling of the `OutlinedButton` is very similar to `ElevatedButton`. The `ThemeData` object exposes `outlinedButtonTheme` field of type `OutlinedButtonThemeData`, which is created out of a `ButtonStyle` object. Similarly, there is a static convenience method `OutlinedButton.styleFrom` that constructs an outlined button style from simple values:
 
@@ -34,7 +34,7 @@ ButtonStyle(
 ),
 ```
 
-## TextButton widget
+## TextButton style
 
 Everything mentioned above is valid for customizing `TextButton` style. The `ThemeData` object exposes `textButtonTheme` field of type `TextButtonThemeData`:
 
@@ -53,5 +53,5 @@ MaterialApp(
 
 ## Your turn
 
-1. Define the global `outlinedButtonTheme` using the `ButtonStyle` default constructor, apply customizations of `foregroundColor`, `side`, and `overlayColor` provided above.
+1. Define the global `outlinedButtonTheme` with the style created using `ButtonStyle()` default constructor, apply customizations of `foregroundColor`, `side`, and `overlayColor` provided above.
 2. Customize the global `textButtonTheme` using the style obtained with `TextButton.styleFrom` method, apply customization of `primary` color provided above.

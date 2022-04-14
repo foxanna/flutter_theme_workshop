@@ -2,7 +2,7 @@
 
 Check the code snippet on the right. The `ExampleWidget` content changed to buttons of different types.
 
-## ElevatedButton widget
+## ElevatedButton style
 
 Earlier you saw how to customize some `ElevatedButton` style properties. `ElevatedButtonThemeData` object is created out of a `ButtonStyle`, and is provided to the global `ThemeData` configuration:
 
@@ -76,4 +76,4 @@ ButtonStyle(
 
 ## Your turn
 
-1. Define the global `elevatedButtonTheme` using `ButtonStyle` default constructor, apply customizations of `backgroundColor`, `foregroundColor`, `overlayColor`, and `textStyle` provided above.
+1. Define the global `elevatedButtonTheme` with the style created using `ButtonStyle()` default constructor, apply customizations of `backgroundColor`, `foregroundColor`, `overlayColor`, and `textStyle` provided above.

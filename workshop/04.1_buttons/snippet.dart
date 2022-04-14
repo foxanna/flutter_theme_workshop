@@ -10,11 +10,10 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          // TODO 1: Provide style value using ButtonStyle() constructor
-        ),
+        // TODO 1: Provide elevatedButtonTheme field value
       ),
       home: ExamplePage(),
     );
@@ -27,6 +26,7 @@ class ExamplePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Consistent design with Flutter Theme'),
+        actions: [IconButton(icon: Icon(Icons.account_circle), onPressed: () {})],
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
