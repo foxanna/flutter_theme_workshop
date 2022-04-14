@@ -10,11 +10,12 @@ This workshop only assumes knowledge of commonly used Flutter material widgets l
 
 * Step 1. Introduction  
 * Step 2. ThemeData  
-* Step 3. Styling texts and icons  
-* Step 4. Styling buttons  
-* Step 5. Styling inputs  
-* Step 6. Styling screens  
-* Step 7. Conclusion
+* Step 3. Global ThemeData  
+* Step 4. Styling texts and icons  
+* Step 5. Styling buttons  
+* Step 6. Styling inputs  
+* Step 7. Styling screens  
+* Step 8. Conclusion  
 
 ## About author
 
