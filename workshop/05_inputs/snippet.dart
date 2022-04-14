@@ -12,8 +12,12 @@ class ExampleApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        // TODO 1: Provide value for inputDecorationTheme field
-        // TODO 2: Provide value for textSelectionTheme field
+        inputDecorationTheme: InputDecorationTheme(
+          // TODO 1: Customize inputDecorationTheme fields
+        ),
+        textSelectionTheme: TextSelectionThemeData(
+          // TODO 2: Customize textSelectionTheme fields
+        ),
       ),
       home: ExamplePage(),
     );

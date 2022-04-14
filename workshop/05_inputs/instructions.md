@@ -1,5 +1,7 @@
 # Styling inputs
 
+Check the code snippet on the right. The `ExampleWidget` content changed to `TextField` widgets in different states with various decorations.
+
 ## TextField widget
 
 Hopefully, by now it's no surprise for you that the `ThemeData` object exposes a field to customize the look of the `TextField` widget - `inputDecorationTheme` of type `InputDecorationTheme`:
