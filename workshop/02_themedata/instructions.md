@@ -2,7 +2,7 @@
 
 Actually, the main focus of this workshop is not on the `Theme` widget itself, but on the `ThemeData` object, which is passed to the `Theme` widget `data` field. `ThemeData` is a container that aggregates styles for all kinds of widgets.
 
-Previously we saw how an `ElevatedButton` can be customized by specifying `elevatedButtonTheme` field:
+Previously you saw how an `ElevatedButton` can be customized by specifying `elevatedButtonTheme` field:
 
 ```dart
 Theme(
@@ -18,7 +18,7 @@ Theme(
 )
 ```
 
-The `ThemeData` class constructor accepts over 70 parameters dedicated to customizing color palette, typography, and components. In next steps of this workshop we'll take a deeper look into these fields:
+The `ThemeData` class constructor accepts over 70 parameters dedicated to customizing color palette, typography, and components. In the next steps of this workshop you will take a deeper look into these fields:
 
 ```dart
 ThemeData(
