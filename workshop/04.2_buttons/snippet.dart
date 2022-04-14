@@ -30,12 +30,8 @@ class ExampleApp extends StatelessWidget {
                     : null),
           ),
         ),
-        outlinedButtonTheme: OutlinedButtonThemeData(
-          // TODO 1: Provide style value using ButtonStyle() constructor
-        ),
-        textButtonTheme: TextButtonThemeData(
-          // TODO 2: Provide style value using OutlinedButton.styleFrom() method
-        ),
+        // TODO 1: Provide outlinedButtonTheme field value
+        // TODO 2: Provide textButtonTheme field value
       ),
       home: ExamplePage(),
     );
