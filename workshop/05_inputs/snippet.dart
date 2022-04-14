@@ -10,14 +10,11 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        inputDecorationTheme: InputDecorationTheme(
-          // TODO 1: Customize inputDecorationTheme fields
-        ),
-        textSelectionTheme: TextSelectionThemeData(
-          // TODO 2: Customize textSelectionTheme fields
-        ),
+        // TODO 1: Provide inputDecorationTheme field value
+        // TODO 2: Provide textSelectionTheme field value
       ),
       home: ExamplePage(),
     );
@@ -30,6 +27,7 @@ class ExamplePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Consistent design with Flutter Theme'),
+        actions: [IconButton(icon: Icon(Icons.account_circle), onPressed: () {})],
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
