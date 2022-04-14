@@ -15,7 +15,9 @@ class ExampleApp extends StatelessWidget {
           seedColor: Colors.green,
           // TODO 1: Provide value for background field
         ),
-        // TODO 2: Provide value for appBarTheme field
+        appBarTheme: AppBarTheme(
+          // TODO 2: Customize appBarTheme fields
+        ),
       ),
       home: ExamplePage(),
     );

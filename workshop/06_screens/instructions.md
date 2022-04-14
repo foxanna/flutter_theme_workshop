@@ -2,6 +2,8 @@
 
 The last styling task for today is configuring the screen skeleton: `Scaffold` and `AppBar` widgets.
 
+Check the code snippet on the right. The `ExampleWidget` content changed to a single `Text`.
+
 ## Scaffold widget
 
 `Scaffold` is a fundamental widget responsible for screen layout and behaviour, and it does not have much styling possibilities in it. The individual `Scaffold` background can be changed with:
