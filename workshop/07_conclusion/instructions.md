@@ -1,6 +1,6 @@
 # Well done!
 
-In this workshop we talked about:
+In this workshop you learned about:
 
 * Styling with `Theme` and `MaterialApp` widgets
 * Ways to create and customize `ThemeData` object
