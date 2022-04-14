@@ -1,14 +1,8 @@
-# Styling texts and icons
+# Styling texts
 
-Though providing a `ColorScheme` is a powerful consistent way to style most of the application components, there might be the desire to tweak some widgets individually. This and the next workshop steps are dedicated to customizing some of the most used widgets.
+Check the code snippet on the right. The `ExampleWidget` content changed to `Text` widgets with different styles.
 
-## Text widget
-
-The simplest `Text` widget usage looks like:
-
-```dart
-Text('example')
-```
+## Text style
 
 Typically, applications use a variety of text styles. Thus, `Text` widgets are usually explicitly customized with some text style: 
 
@@ -24,6 +18,8 @@ Text(
   ),
 )
 ```
+
+## TextTheme
 
 Instead of configuring individual `Text` widget styles, the consistent design can be achieved by customizing a global set of text styles. The `TextTheme` object, containing definitions for the various typographical styles, can be provided to the global `ThemeData` object:
 
@@ -58,7 +54,9 @@ TextTheme(
 )
 ```
 
-However, describing all `TextStyle` fields of `TextTheme` is unnecessary. As with the `ThemeData` object, there are predefined `TextTheme` instances that implement the typography styles in the material design specification:
+However, describing all `TextStyle` fields of `TextTheme` is unnecessary. As with the `ThemeData` object, there are predefined `TextTheme` instances that implement the typography styles in the material design specification.
+
+## Predefined TextTheme
 
 * `Typography().black` - a material design text theme with dark glyphs 
 * `Typography().white` - a material design text theme with light glyphs
@@ -87,6 +85,8 @@ While the `copyWith` method creates a copy of this text theme but with the given
 
 It's worth mentioning that by default, the `ThemeData` object already defines an instance of `TextTheme` with either dark or light glyphs depending on the `ThemeData` brightness.
 
+## Using TextTheme
+
 Now, `TextStyle`s from above can be obtained with `Theme.of(context).textTheme` and provided to individual `Text` widgets:
 
 ```dart
@@ -104,29 +104,7 @@ Text('bodyMedium')
 
 In fact, providing global `TextTheme` is also a way to implicitly customize some other widgets. For example, `ElevatedButton`, `TextButton`, and `OutlinedButton` widgets by default use `labelLarge` text style, `titleLarge` style is used for `AlertDialog.title` and `AppBar.title`, etc.
 
-## Icon widget
-
-The simplest `Icon` widget usage looks like:
-
-```dart
-Icon(Icons.account_circle)
-```
-
-It has a few fields to style individually: `size`, `color`. And the same fields can be customized globally through `IconThemeData` object:
-
-```dart
-MaterialApp(
-  theme: ThemeData(
-    iconTheme: IconThemeData(
-      color: Colors.lime,
-      size: 36.0,
-    ),
-  ),
-  ...
-)
-```
-
 ## Your turn
 
-1. Customize `TextTheme` globally. Use `Typography().black` instance and apply customizations with `.apply` and `.copyWith` methods.
-2. Customize `IconThemeData` globally.
+1. Customize `TextTheme` globally with the `Typography().black` instance.
+2. Apply customizations with `.apply` and `.copyWith` methods.

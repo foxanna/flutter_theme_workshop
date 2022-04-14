@@ -10,10 +10,10 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        // TODO 1: Provide and customize value for textTheme field
-        // TODO 2: Provide value for iconTheme field
+        // TODO 1: Provide iconTheme field value
       ),
       home: ExamplePage(),
     );
@@ -26,6 +26,7 @@ class ExamplePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Consistent design with Flutter Theme'),
+        actions: [IconButton(icon: Icon(Icons.account_circle), onPressed: () {})],
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
@@ -43,11 +44,8 @@ class ExampleWidget extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Icon(Icons.account_circle),
-        Text('displayLarge', style: Theme.of(context).textTheme.displayLarge),
-        Text('explicit bodyMedium', style: Theme.of(context).textTheme.bodyMedium),
-        Text('implicit bodyMedium'),
-        Text('labelSmall', style: Theme.of(context).textTheme.labelSmall),
+        Icon(Icons.email),
+        IconButton(icon: Icon(Icons.language), onPressed: () {}),
       ],
     );
   }

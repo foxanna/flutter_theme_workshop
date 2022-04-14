@@ -10,6 +10,7 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         textTheme: Typography().black
@@ -25,10 +26,6 @@ class ExampleApp extends StatelessWidget {
                 letterSpacing: 0.8,
               ),
             ),
-        iconTheme: IconThemeData(
-          color: Colors.lime,
-          size: 36.0,
-        ),
       ),
       home: ExamplePage(),
     );
@@ -41,6 +38,7 @@ class ExamplePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Consistent design with Flutter Theme'),
+        actions: [IconButton(icon: Icon(Icons.account_circle), onPressed: () {})],
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
@@ -58,7 +56,6 @@ class ExampleWidget extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Icon(Icons.account_circle),
         Text('displayLarge', style: Theme.of(context).textTheme.displayLarge),
         Text('explicit bodyMedium', style: Theme.of(context).textTheme.bodyMedium),
         Text('implicit bodyMedium'),

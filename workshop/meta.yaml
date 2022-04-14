@@ -11,7 +11,10 @@ steps:
     directory: 02.2_themedata
     has_solution: true
   - name: Styling texts and icons
-    directory: 03_texts_icons
+    directory: 03.1_texts_icons
+    has_solution: true
+  - name: Styling texts and icons
+    directory: 03.2_texts_icons
     has_solution: true
   - name: Styling buttons
     directory: 04.1_buttons
