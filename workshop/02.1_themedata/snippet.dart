@@ -27,7 +27,7 @@ class ExamplePage extends StatelessWidget {
         child: Center(
           child: Theme(
             data: ThemeData(
-              // TODO 1: Provide colorScheme
+              // TODO 1: Provide colorScheme value
               elevatedButtonTheme: ElevatedButtonThemeData(
                 style: ElevatedButton.styleFrom(
                   primary: Colors.lime,
