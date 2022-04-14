@@ -65,7 +65,7 @@ IconButton(
 
 ## AppBar Icon style
 
-By default, customizations of the global theme `iconTheme` field affect `IconButton` widgets inside the `AppBar`, except for their `color`. This account button is half-transparent and of size `36`:
+By default, customizations of the global theme `iconTheme` field affect `IconButton` widgets inside the `AppBar`, except for their `color`. With global `iconTheme` customized as above, this account button would be half-transparent and of size `36`:
 
 ```dart
 AppBar(
