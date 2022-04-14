@@ -20,7 +20,7 @@ It's worth mentioning that if no `theme` value is provided to `MaterialApp` widg
 
 ## Dark theme
 
-Additionally, the `MaterialApp` widget exposes `darkTheme` field, which is used to provide a dark version of the user interface. `themeMode` field controls which theme is used if a `darkTheme` is provided:
+Additionally, the `MaterialApp` widget exposes `darkTheme` field, which is used to provide a dark version of the user interface. The `themeMode` field controls which theme is used if a `darkTheme` is provided:
 
 ```dart
 MaterialApp(
@@ -40,6 +40,6 @@ ThemeData theme = Theme.of(context);
 
 ## Your turn
 
-1. Copy the `ThemeData` value from `Theme` widget into the `theme` field of the `MaterialApp`. The `AppBar` background color should change to green.
+1. Copy the `ThemeData` value from the `Theme` widget into the `theme` field of the `MaterialApp`. The `AppBar` background color should change to green.
 2. Remove `Theme` widget around `ExampleWidget`. All three buttons should remain lime.
 3. Set the `darkTheme` field of the `MaterialApp` to the predefined dark theme. Try different values for the `themeMode` field of the `MaterialApp`.
