@@ -34,6 +34,7 @@ class ExamplePage extends StatelessWidget {
           // Then, select "Remove this widget" from the dropdown menu that appears.
           child: Theme(
             data: ThemeData(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
               elevatedButtonTheme: ElevatedButtonThemeData(
                 style: ElevatedButton.styleFrom(
                   primary: Colors.lime,

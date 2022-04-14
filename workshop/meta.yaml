@@ -5,7 +5,10 @@ steps:
     directory: 01_introduction
     has_solution: true
   - name: ThemeData
-    directory: 02_themedata
+    directory: 02.1_themedata
+    has_solution: true
+  - name: Global ThemeData
+    directory: 02.2_themedata
     has_solution: true
   - name: Styling texts and icons
     directory: 03_texts_icons
