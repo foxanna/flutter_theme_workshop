@@ -22,7 +22,9 @@ This workshop only assumes knowledge of commonly used Flutter material widgets l
 
 ## Let's go!
 
-Take a look at the `ExampleWidget` on the line `40` on the right. It consists of three similar `ElevatedButton`s placed in a `Column`:
+Take a look at the code snippet on the right. `ExampleApp` is a `MaterialApp` with `ExamplePage` as home. `ExamplePage` consists of a `Scaffold` with a basic `AppBar` and `ExampleWidget` as body. This widgets structure will remain the same over the span of this workshop, but the content inside the `ExampleWidget` will change from step to step.
+
+To start with, `ExampleWidget` consists of three similar `ElevatedButton`s placed in a `Column`:
 
 ```dart
 Column(
@@ -35,7 +37,7 @@ Column(
 )
 ```
 
-If you run the code snippet on the right, you will see three similarly-looking blue buttons with white text. 
+Run the code snippet on the right. You will see three similarly-looking blue buttons with white text. 
 
 To make UI more interesting, let's design a lime button with blue text:
 
@@ -49,7 +51,7 @@ ElevatedButton(
 )
 ```
 
-To make this styling consistent across the application, such a style should be applied to every button, which would lead to code duplication. There are of course ways around it, like creating extensions or custom buttons. But we are here to talk about effortless UI consistency, which can be achieved with the `Theme` widget.
+To make this styling consistent across the application, such a style should be applied to every button, which would lead to code duplication. There are of course ways around it, like creating extensions or custom buttons. But this workshop is about effortless UI consistency, which can be achieved with the `Theme` widget.
 
 ## Theme widget
 
