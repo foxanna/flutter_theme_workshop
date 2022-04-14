@@ -4,7 +4,7 @@ The last styling task for today is configuring the screen skeleton: `Scaffold` a
 
 Check the code snippet on the right. The `ExampleWidget` content changed to a single `Text`.
 
-## Scaffold widget
+## Scaffold style
 
 `Scaffold` is a fundamental widget responsible for screen layout and behaviour, and it does not have much styling possibilities in it. The individual `Scaffold` background can be changed with:
 
@@ -42,7 +42,7 @@ MaterialApp(
 )
 ```
 
-## AppBar widget
+## AppBar style
 
 To consistently apply a particular style to all `AppBar` widgets, you can specify the `appBarTheme` field of the global `ThemeData` object:
 
