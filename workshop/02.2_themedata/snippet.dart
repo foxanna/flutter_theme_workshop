@@ -10,8 +10,8 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // TODO 2: Provide and customize value for theme field
-      // TODO 3: Provide value for darkTheme field, specify themeMode value
+      // TODO 1: Provide theme field value
+      // TODO 3: Provide darkTheme field value, specify themeMode
       home: ExamplePage(),
     );
   }
@@ -27,7 +27,7 @@ class ExamplePage extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.all(20.0),
         child: Center(
-          // TODO 1: Remove the Theme widget
+          // TODO 2: Remove the Theme widget
 
           // Tip: Once again, you can place your cursor over the "Theme" widget below
           // and hit alt + enter on Windows/Linux or option + return on Mac.

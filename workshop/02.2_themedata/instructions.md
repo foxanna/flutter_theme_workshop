@@ -7,7 +7,7 @@ To make the styling consistent across the entire application, the  `MaterialApp`
 ```dart
 MaterialApp(
   theme: ThemeData(
-    colorSchemeSeed: Colors.green,
+    colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
     elevatedButtonTheme: ElevatedButtonThemeData(...),
   ),
   home: ExamplePage(),
@@ -40,6 +40,6 @@ ThemeData theme = Theme.of(context);
 
 ## Your turn
 
-1. Remove `Theme` widget around `ExampleWidget`.
-2. Instead, set the `theme` field of the `MaterialApp` to the  light theme created with `colorSchemeSeed` field, customize buttons style. All three buttons should remain lime.
+1. Copy the `ThemeData` value from `Theme` widget into the `theme` field of the `MaterialApp`. The `AppBar` background color should change to green.
+2. Remove `Theme` widget around `ExampleWidget`. All three buttons should remain lime.
 3. Set the `darkTheme` field of the `MaterialApp` to the predefined dark theme. Try different values for the `themeMode` field of the `MaterialApp`.
