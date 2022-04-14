@@ -1,8 +1,21 @@
 # Styling buttons
 
+Check the code on the right. The `ExampleWidget` content changed and now contains different types of buttons:
+
+```dart
+Column(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    ElevatedButton(child: Text('ElevatedButton'), onPressed: () {}),
+    OutlinedButton(child: Text('OutlinedButton'), onPressed: () {}),
+    TextButton(child: Text('TextButton'), onPressed: () {}),
+  ],
+)
+```
+
 ## ElevatedButton widget
 
-Earlier we saw how to customize some `ElevatedButton` style properties. `ElevatedButtonThemeData` object is created out of a `ButtonStyle`, and is provided to the global `ThemeData` configuration:
+Earlier you saw how to customize some `ElevatedButton` style properties. `ElevatedButtonThemeData` object is created out of a `ButtonStyle`, and is provided to the global `ThemeData` configuration:
 
 ```dart
 MaterialApp(
@@ -29,7 +42,7 @@ ButtonStyle(
 
 Both `backgroundColor` and `foregroundColor` fields are of type `MaterialStateProperty`, which represent values that depend on a widget's [*material state*](https://material.io/design/interaction/states.html). The `.all` constructor creates a `MaterialStateProperty` that resolves to the same value for any states set.
 
-Now let's say the button should be of different shades of green when hovered and pressed. For that, we'll use the `overlayColor` field of the same type `MaterialStateProperty`. This time, we are interested in different behavior depending on the button state. For that we'll use the `.resolveWith` constructor:
+Now let's say the button should be of different shades of green when hovered and pressed. The `overlayColor` field of the same type `MaterialStateProperty` is responsible for these states. This time, different look is expected depending on the button state, which is achieved with the `.resolveWith` constructor:
 
 ```dart
 ButtonStyle(
@@ -74,4 +87,4 @@ ButtonStyle(
 
 ## Your turn
 
-1. Define global `elevatedButtonTheme` using `ButtonStyle` default constructor, apply customizations provided above.
+1. Define the global `elevatedButtonTheme` using `ButtonStyle` default constructor, apply customizations of `backgroundColor`, `foregroundColor`, `overlayColor`, and `textStyle` provided above.

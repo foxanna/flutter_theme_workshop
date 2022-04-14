@@ -53,5 +53,5 @@ MaterialApp(
 
 ## Your turn
 
-1. Define global `outlinedButtonTheme` using `ButtonStyle` default constructor, apply customizations provided above.
-2. Customize global `textButtonTheme` using style obtained with `TextButton.styleFrom` method, apply customizations provided above.
+1. Define the global `outlinedButtonTheme` using the `ButtonStyle` default constructor, apply customizations of `foregroundColor`, `side`, and `overlayColor` provided above.
+2. Customize the global `textButtonTheme` using the style obtained with `TextButton.styleFrom` method, apply customization of `primary` color provided above.
