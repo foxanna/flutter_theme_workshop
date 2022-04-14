@@ -10,6 +10,7 @@ class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       // TODO 1: Provide theme field value
       // TODO 3: Provide darkTheme field value, specify themeMode
       home: ExamplePage(),
@@ -23,6 +24,7 @@ class ExamplePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Consistent design with Flutter Theme'),
+        actions: [IconButton(icon: Icon(Icons.account_circle), onPressed: () {})],
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
