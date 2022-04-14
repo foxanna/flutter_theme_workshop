@@ -1,17 +1,6 @@
 # Styling buttons
 
-Check the code on the right. The `ExampleWidget` content changed and now contains different types of buttons:
-
-```dart
-Column(
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  children: [
-    ElevatedButton(child: Text('ElevatedButton'), onPressed: () {}),
-    OutlinedButton(child: Text('OutlinedButton'), onPressed: () {}),
-    TextButton(child: Text('TextButton'), onPressed: () {}),
-  ],
-)
-```
+Check the code snippet on the right. The `ExampleWidget` content changed to buttons of different types.
 
 ## ElevatedButton widget
 

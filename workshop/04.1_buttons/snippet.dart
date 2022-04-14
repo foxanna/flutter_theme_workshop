@@ -12,7 +12,9 @@ class ExampleApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        // TODO 1: Provide value for elevatedButtonTheme field using ButtonStyle() constructor
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          // TODO 1: Provide style value using ButtonStyle() constructor
+        ),
       ),
       home: ExamplePage(),
     );
