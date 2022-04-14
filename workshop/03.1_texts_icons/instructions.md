@@ -35,7 +35,7 @@ IconTheme(
 )
 ```
 
-Similarly, icons style can be customized globally through `iconTheme` field of the `ThemeData` object:
+Similarly, the icons style can be customized globally through `iconTheme` field of the `ThemeData` object:
 
 ```dart
 MaterialApp(
@@ -50,7 +50,7 @@ MaterialApp(
 )
 ```
 
-With this change, all application icons will be lime and half-transparent.
+With this change, all application icons would be lime and half-transparent.
 
 ## IconButton style
 
