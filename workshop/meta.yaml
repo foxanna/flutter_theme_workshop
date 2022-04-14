@@ -14,7 +14,10 @@ steps:
     directory: 03_texts_icons
     has_solution: true
   - name: Styling buttons
-    directory: 04_buttons
+    directory: 04.1_buttons
+    has_solution: true
+  - name: Styling buttons
+    directory: 04.2_buttons
     has_solution: true
   - name: Styling inputs
     directory: 05_inputs

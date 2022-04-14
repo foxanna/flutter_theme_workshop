@@ -12,9 +12,23 @@ class ExampleApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        // TODO 1: Provide value for elevatedButtonTheme field using ButtonStyle() constructor
-        // TODO 2: Provide value for outlinedButtonTheme field using ButtonStyle() constructor
-        // TODO 3: Provide value for textButtonTheme field using OutlinedButton.styleFrom() method
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(Colors.lime),
+            foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+            overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
+              if (states.contains(MaterialState.hovered))
+                return Colors.greenAccent;
+              if (states.contains(MaterialState.pressed))
+                return Colors.lightGreenAccent;
+              return null;
+            }),
+            textStyle: MaterialStateProperty.resolveWith<TextStyle?>((states) =>
+                states.contains(MaterialState.pressed)
+                    ? TextStyle(fontWeight: FontWeight.bold)
+                    : null),
+          ),
+        ),
       ),
       home: ExamplePage(),
     );
