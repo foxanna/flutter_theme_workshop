@@ -31,7 +31,6 @@ InputDecorationTheme(
     fontSize: 14.0,
   ),
   suffixIconColor: Colors.greenAccent,
-  ...
 )
 ```
 
@@ -52,7 +51,6 @@ These values default to `UnderlineInputBorder` which draws a horizontal line at 
 
 ```dart
 InputDecorationTheme(
-  ...
   enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.lightGreen)),
   focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.lightGreen, width: 2)),
   errorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
