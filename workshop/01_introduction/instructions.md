@@ -23,9 +23,9 @@ This workshop only assumes knowledge of commonly used Flutter material widgets l
 
 ## Let's go!
 
-Take a look at the code snippet on the right. `ExampleApp` is a `MaterialApp` with `ExamplePage` as home. `ExamplePage` consists of a `Scaffold` with an `AppBar` and `ExampleWidget` as body. This widgets structure will remain the same over the span of this workshop, but the content inside the `ExampleWidget` will change from step to step.
+Take a look at the code snippet on the right. `ExampleApp` is a `MaterialApp` with `ExamplePage` as `home` page. `ExamplePage` consists of a `Scaffold` with an `AppBar` and `ExampleWidget` as `body`. This widgets structure will remain the same over the span of this workshop, but the content inside the `ExampleWidget` will change from step to step.
 
-To start with, `ExampleWidget` consists of three similar `ElevatedButton`s placed in a `Column`:
+To start with, `ExampleWidget` consists of three similar `ElevatedButton` widgets placed in a `Column`:
 
 ```dart
 Column(
