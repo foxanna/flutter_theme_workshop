@@ -22,8 +22,9 @@ The `ThemeData` class constructor accepts over 70 parameters dedicated to custom
 
 ```dart
 ThemeData(
-  textTheme: TextTheme(...),
+  colorScheme: ColorScheme(...),
   iconTheme: IconThemeData(...),
+  textTheme: TextTheme(...),
   elevatedButtonTheme: ElevatedButtonThemeData(...),
   outlinedButtonTheme: OutlinedButtonThemeData(...),
   textButtonTheme: TextButtonThemeData(...),
@@ -31,7 +32,6 @@ ThemeData(
   textSelectionTheme: TextSelectionThemeData(...),
   appBarTheme: AppBarTheme(...), 
   scaffoldBackgroundColor: Color(...),
-  ...
 )
 ```
 
