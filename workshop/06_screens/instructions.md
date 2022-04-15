@@ -64,9 +64,10 @@ AppBarTheme(
   elevation: 8.0,
   actionsIconTheme: IconThemeData(color: Colors.blue),
   centerTitle: false,
-  ...
 )
 ```
+
+This is a chance to override the look of `IconButton` widgets inside the `AppBar` if you have earlier provided the global `iconTheme` value.
 
 ## Your turn
 
