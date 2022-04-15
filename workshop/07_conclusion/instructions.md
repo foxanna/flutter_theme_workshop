@@ -5,7 +5,7 @@ In this workshop you learned about:
 * Styling with `Theme` and `MaterialApp` widgets
 * Ways to create and customize `ThemeData` object
 * Customizing texts and icons
-* Customizing buttons styles and text inputs
+* Styling buttons and text inputs
 * Customizing scaffolds and app bars
   
 The goal of this workshop was to show how it is possible to customize different widget types. However, you don't necessarily have to do this. The snippet on the right contains all widgets we styled in this workshop. Everything is customized by providing the generated `ColorScheme` only, and it already looks stylish, doesn't it? And if you have access to a professional designer or want to experiment - `ThemeData` is there to help you with consistency. 
