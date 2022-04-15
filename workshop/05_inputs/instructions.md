@@ -34,7 +34,7 @@ InputDecorationTheme(
 )
 ```
 
-Additionally, text style of the hint and of the text value entered in `TextField` can be implicitly controlled by the `titleMedium` field of the `TextTheme`, error style - by `bodySmall`.
+Additionally, text style of the `hint` and of the `text` entered in the `TextField` can be implicitly controlled by the `titleMedium` field of the `TextTheme`, error style - by `bodySmall`.
 
 ## TextField borders
 
@@ -78,5 +78,5 @@ MaterialApp(
 
 ## Your turn
 
-1. Define global `inputDecorationTheme` using customizations given above. Enter some text into input fields, switch between fields to see different UI when they are focused or not.
+1. Define global `inputDecorationTheme` using all customizations given above. Enter some text into input fields, switch between fields to see different UI when they are focused or not.
 2. Define global `textSelectionTheme` using customizations given above. Select entered texts to see the effect.
