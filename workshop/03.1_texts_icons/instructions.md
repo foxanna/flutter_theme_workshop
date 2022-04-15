@@ -50,11 +50,11 @@ MaterialApp(
 )
 ```
 
-With this change, all application icons would be lime and half-transparent.
+With this change, all application icons would become lime and half-transparent.
 
 ## IconButton style
 
-`Icon` widgets are not interactive. For interactive icons, Flutter has a dedicated `IconButton` widget. The above customization also affects the look of `IconButton` widgets, so this button would also become lime:
+`Icon` widgets are not interactive. For interactive icons, Flutter has a dedicated `IconButton` widget. The above customization also affects the look of `IconButton` widgets, so any button like this would also become lime:
 
 ```dart
 IconButton(
@@ -65,7 +65,7 @@ IconButton(
 
 ## AppBar Icon style
 
-By default, customizations of the global theme `iconTheme` field affect `IconButton` widgets inside the `AppBar`, except for their `color`. With global `iconTheme` customized as above, this account button would be half-transparent and of size `36`:
+By default, customizations of the global theme `iconTheme` field also affect `IconButton` widgets inside the `AppBar`, except for their `color`. With global `iconTheme` customized as above, any button like this would be half-transparent and of size `36`:
 
 ```dart
 AppBar(
