@@ -6,6 +6,8 @@ void main() {
   runApp(ExampleApp());
 }
 
+// TODO 1: Declare ButtonOverlayColor and ButtonTextStyle classes
+
 class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,23 +17,25 @@ class ExampleApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(Colors.lime),
-            foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-            overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
+            backgroundColor: MaterialStateProperty.all(Colors.lime),
+            foregroundColor: MaterialStateProperty.all(Colors.blue),
+            // TODO 2: Replace overlayColor field value with an instance of ButtonOverlayColor
+            overlayColor: MaterialStateProperty.resolveWith((states) {
               if (states.contains(MaterialState.hovered))
                 return Colors.greenAccent;
               if (states.contains(MaterialState.pressed))
                 return Colors.lightGreenAccent;
               return null;
             }),
-            textStyle: MaterialStateProperty.resolveWith<TextStyle?>((states) =>
+            // TODO 2: Replace textStyle field value with an instance of ButtonTextStyle
+            textStyle: MaterialStateProperty.resolveWith((states) =>
                 states.contains(MaterialState.pressed)
                     ? TextStyle(fontWeight: FontWeight.bold)
                     : null),
           ),
         ),
-        // TODO 1: Provide outlinedButtonTheme field value
-        // TODO 2: Provide textButtonTheme field value
+        // TODO 3: Provide outlinedButtonTheme field value
+        // TODO 4: Provide textButtonTheme field value
       ),
       home: ExamplePage(),
     );

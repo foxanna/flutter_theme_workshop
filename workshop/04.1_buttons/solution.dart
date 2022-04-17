@@ -15,16 +15,16 @@ class ExampleApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(Colors.lime),
-            foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-            overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
+            backgroundColor: MaterialStateProperty.all(Colors.lime),
+            foregroundColor: MaterialStateProperty.all(Colors.blue),
+            overlayColor: MaterialStateProperty.resolveWith((states) {
               if (states.contains(MaterialState.hovered))
                 return Colors.greenAccent;
               if (states.contains(MaterialState.pressed))
                 return Colors.lightGreenAccent;
               return null;
             }),
-            textStyle: MaterialStateProperty.resolveWith<TextStyle?>((states) =>
+            textStyle: MaterialStateProperty.resolveWith((states) =>
                 states.contains(MaterialState.pressed)
                     ? TextStyle(fontWeight: FontWeight.bold)
                     : null),

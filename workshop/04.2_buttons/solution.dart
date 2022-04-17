@@ -6,6 +6,25 @@ void main() {
   runApp(ExampleApp());
 }
 
+class ButtonOverlayColor implements MaterialStateProperty<Color?> {
+  @override
+  Color? resolve(Set<MaterialState> states) {
+    if (states.contains(MaterialState.hovered))
+      return Colors.greenAccent;
+    if (states.contains(MaterialState.pressed))
+      return Colors.lightGreenAccent;
+    return null;
+  }
+}
+
+class ButtonTextStyle implements MaterialStateProperty<TextStyle?> {
+  @override
+  TextStyle? resolve(Set<MaterialState> states) =>
+      states.contains(MaterialState.pressed)
+          ? TextStyle(fontWeight: FontWeight.bold)
+          : null;
+}
+
 class ExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,32 +34,18 @@ class ExampleApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(Colors.lime),
-            foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-            overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
-              if (states.contains(MaterialState.hovered))
-                return Colors.greenAccent;
-              if (states.contains(MaterialState.pressed))
-                return Colors.lightGreenAccent;
-              return null;
-            }),
-            textStyle: MaterialStateProperty.resolveWith<TextStyle?>((states) =>
-                states.contains(MaterialState.pressed)
-                    ? TextStyle(fontWeight: FontWeight.bold)
-                    : null),
+            backgroundColor: MaterialStateProperty.all(Colors.lime),
+            foregroundColor: MaterialStateProperty.all(Colors.blue),
+            overlayColor: ButtonOverlayColor(),
+            textStyle: ButtonTextStyle(),
           ),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
-            foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
-            side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Colors.green, width: 2)),
-            overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
-              if (states.contains(MaterialState.hovered))
-                return Colors.lime.withOpacity(0.2);
-              if (states.contains(MaterialState.pressed))
-                return Colors.lime.withOpacity(0.4);
-              return null;
-            }),
+            foregroundColor: MaterialStateProperty.all(Colors.green),
+            side: MaterialStateProperty.all(BorderSide(color: Colors.green, width: 2)),
+            overlayColor: ButtonOverlayColor(),
+            textStyle: ButtonTextStyle(),
           ),
         ),
         textButtonTheme: TextButtonThemeData(

@@ -22,21 +22,71 @@ And similarly, a `ButtonStyle` object can be created with the default `ButtonSty
 
 ```dart
 ButtonStyle(
-  foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
-  side: MaterialStateProperty.all<BorderSide>(BorderSide(color: Colors.green, width: 2)),
-  overlayColor: MaterialStateProperty.resolveWith<Color?>((states) {
-    if (states.contains(MaterialState.hovered)) 
-      return Colors.lime.withOpacity(0.2);
-    if (states.contains(MaterialState.pressed)) 
-      return Colors.lime.withOpacity(0.4);
+  foregroundColor: MaterialStateProperty.all(Colors.green),
+  side: MaterialStateProperty.all(BorderSide(color: Colors.green, width: 2)),
+  overlayColor: MaterialStateProperty.resolveWith((states) {
+    if (states.contains(MaterialState.hovered))
+      return Colors.greenAccent;
+    if (states.contains(MaterialState.pressed))
+      return Colors.lightGreenAccent;
     return null;
   }),
+  textStyle: MaterialStateProperty.resolveWith((states) =>
+    states.contains(MaterialState.pressed)
+      ? TextStyle(fontWeight: FontWeight.bold)
+      : null
+  ),
 ),
+```
+
+## Reusing MaterialStateProperty
+
+Have you noticed that in the code snippet above the `overlayColor` and `textStyle` values are exactly the same as for the `ElevatedButton` from the previous workshop step? It may happen that different widget types are required to have the same styling of some UI aspects and thus should share the same `MaterialStateProperty` logic. To make the implementation easy and consistent, inheritors of `MaterialStateProperty` can be declared:
+
+```dart
+class ButtonOverlayColor implements MaterialStateProperty<Color?> {
+  @override
+  Color? resolve(Set<MaterialState> states) {
+    if (states.contains(MaterialState.hovered)) 
+      return Colors.greenAccent;
+    if (states.contains(MaterialState.pressed)) 
+      return Colors.lightGreenAccent;
+    return null;
+  }
+}
+```
+```dart
+class ButtonTextStyle implements MaterialStateProperty<TextStyle?> {
+  @override
+  TextStyle? resolve(Set<MaterialState> states) =>
+      states.contains(MaterialState.pressed)
+          ? TextStyle(fontWeight: FontWeight.bold)
+          : null;
+}
+```
+
+And used in multiple styles:
+
+```dart
+ThemeData(
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ButtonStyle(
+      overlayColor: ButtonOverlayColor(),
+      textStyle: ButtonTextStyle(),
+    ),
+  ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: ButtonStyle(
+      overlayColor: ButtonOverlayColor(),
+      textStyle: ButtonTextStyle(),
+    ),
+  ),
+)
 ```
 
 ## TextButton style
 
-Everything mentioned above is valid for customizing `TextButton` style. The `ThemeData` object exposes `textButtonTheme` field of type `TextButtonThemeData`:
+Everything mentioned above is valid for customizing `TextButton` style. The `ThemeData` object exposes `textButtonTheme` field of type `TextButtonThemeData`, which can be created out of `ButtonStyle` instance:
 
 ```dart
 MaterialApp(
@@ -53,5 +103,7 @@ MaterialApp(
 
 ## Your turn
 
-1. Define the global `outlinedButtonTheme` with the `style` created using `ButtonStyle()` default constructor, apply customizations of `foregroundColor`, `side`, and `overlayColor` provided above.
-2. Customize the global `textButtonTheme` using the `style` obtained with `TextButton.styleFrom` method, apply customization of `primary` color provided above.
+1. Declare `ButtonOverlayColor` and `ButtonTextStyle` classes to reuse their `MaterialStateProperty` logic in multiple styles.
+2. Update the `ElevatedButtonThemeData` fields: `overlayColor` to a `ButtonOverlayColor` instance, `textStyle` to a `ButtonTextStyle` instance.
+3. Define the global `outlinedButtonTheme` with the `style` created using `ButtonStyle()` default constructor. Apply customizations of `foregroundColor` and `side` fields provided above.  Set `overlayColor` and `textStyle` field values to classes created earlier.  
+4. Customize the global `textButtonTheme` using the `style` obtained with `TextButton.styleFrom` method, apply customization of `primary` color provided above.
