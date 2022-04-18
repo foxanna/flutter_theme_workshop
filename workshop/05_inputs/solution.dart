@@ -26,11 +26,16 @@ class ExampleApp extends StatelessWidget {
             fontSize: 14.0,
           ),
           suffixIconColor: Colors.greenAccent,
-          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.lightGreen)),
-          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.lightGreen, width: 2)),
-          errorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
-          focusedErrorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.red, width: 2)),
-          disabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
+          border: MaterialStateOutlineInputBorder.resolveWith((states) {
+            final isFocused = states.contains(MaterialState.focused);
+            final isDisabled = states.contains(MaterialState.disabled);
+            final hasError = states.contains(MaterialState.error);
+
+            final color = isDisabled ? Colors.grey : hasError ? Colors.red : Colors.lightGreen;
+            final width = isFocused ? 2.0 : 1.0;
+
+            return OutlineInputBorder(borderSide: BorderSide(color: color, width: width));
+          }),
         ),
         textSelectionTheme: TextSelectionThemeData(
           cursorColor: Colors.lightGreen,
