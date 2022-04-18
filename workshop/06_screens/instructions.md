@@ -2,7 +2,7 @@
 
 The last styling task for today is configuring the screen skeleton: `Scaffold` and `AppBar` widgets.
 
-Check the code snippet on the right. The `ExampleWidget` content changed to a single `Text`.
+Check the code snippet on the right. The `ExampleWidget` content changed to a scrollable list of lime boxes.
 
 ## Scaffold style
 
@@ -67,12 +67,24 @@ AppBarTheme(
 )
 ```
 
-This is a chance to override the look of `IconButton` widgets inside the `AppBar` if you have earlier provided the global `iconTheme` value.
+Remember the `MaterialStateColor` class from previous workshop step? The one that enables providing `MaterialStateProperty<Color>` to a field of type `Color`. The `AppBar` background can change responding to `scrolledUnder` material state:
+
+```dart
+AppBarTheme(
+  backgroundColor: MaterialStateColor.resolveWith((states) =>
+    states.contains(MaterialState.scrolledUnder)
+      ? Colors.limeAccent
+      : Colors.lime
+  ),
+)
+```
+
+`AppBarTheme` also gives a chance to override the look of `IconButton` widgets inside the `AppBar` if you have earlier provided the global `iconTheme` value.
 
 ## Your turn
 
 1. Modify global `ColorScheme` by providing `background` field value**.
-2. Define global `appBarTheme` using customizations given above.
+2. Define global `appBarTheme` using customizations given above. Set `backgroundColor` field of the `AppBarTheme` to a `MaterialStateColor` instance. Scroll the list of lime boxes to see the `AppBar` background change.
 
 
 ** The above would only be valid if [this issue](https://github.com/flutter/flutter/issues/101389) fix is released before the event

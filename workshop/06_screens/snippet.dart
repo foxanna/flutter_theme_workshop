@@ -44,6 +44,14 @@ class ExamplePage extends StatelessWidget {
 class ExampleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Text('Styling screens');
+    final screenHeight = MediaQuery.of(context).size.height;
+
+    return ListView.builder(
+      itemBuilder: (context, index) => Padding(
+        padding: EdgeInsets.all(20.0) + EdgeInsets.only(left: index.isEven ? 0.0 : 40.0, right: !index.isEven ? 0.0 : 40.0),
+        child: Container(height: screenHeight / 3, color: Colors.lime),
+      ),
+      itemCount: 4,
+    );
   }
 }
