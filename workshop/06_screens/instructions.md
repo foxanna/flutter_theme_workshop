@@ -29,7 +29,6 @@ MaterialApp(
 )
 ```
 
-
 Or, if you have been using a `colorSchemeSeed` property to create a `ColorScheme`, you can set a `scaffoldBackgroundColor` field:
 
 ```dart
@@ -67,6 +66,8 @@ AppBarTheme(
 )
 ```
 
+`AppBarTheme` gives a chance to override the look of `IconButton` widgets inside the `AppBar` with `actionsIconTheme` if you have earlier provided the global `iconTheme` value.
+
 Remember the `MaterialStateColor` class from previous workshop step? The one that enables providing `MaterialStateProperty<Color>` to a field of type `Color`. The `AppBar` background can change responding to `scrolledUnder` material state:
 
 ```dart
@@ -78,8 +79,6 @@ AppBarTheme(
   ),
 )
 ```
-
-`AppBarTheme` also gives a chance to override the look of `IconButton` widgets inside the `AppBar` if you have earlier provided the global `iconTheme` value.
 
 ## Your turn
 
