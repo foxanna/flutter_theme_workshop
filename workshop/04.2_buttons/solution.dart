@@ -20,9 +20,9 @@ class ButtonOverlayColor implements MaterialStateProperty<Color?> {
 class ButtonTextStyle implements MaterialStateProperty<TextStyle?> {
   @override
   TextStyle? resolve(Set<MaterialState> states) =>
-      states.contains(MaterialState.pressed)
-          ? TextStyle(fontWeight: FontWeight.bold)
-          : null;
+    states.contains(MaterialState.pressed)
+      ? TextStyle(fontWeight: FontWeight.bold)
+      : null;
 }
 
 class ExampleApp extends StatelessWidget {

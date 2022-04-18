@@ -29,9 +29,10 @@ class ExampleApp extends StatelessWidget {
             }),
             // TODO 2: Replace textStyle field value with an instance of ButtonTextStyle
             textStyle: MaterialStateProperty.resolveWith((states) =>
-                states.contains(MaterialState.pressed)
-                    ? TextStyle(fontWeight: FontWeight.bold)
-                    : null),
+              states.contains(MaterialState.pressed)
+                ? TextStyle(fontWeight: FontWeight.bold)
+                : null
+            ),
           ),
         ),
         // TODO 3: Provide outlinedButtonTheme field value
