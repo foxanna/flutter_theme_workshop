@@ -19,14 +19,14 @@ The `InputDecorationTheme` class has about 30 fields dedicated to different aspe
 
 ```dart
 InputDecorationTheme(
-  errorStyle: TextStyle(
+  errorStyle: const TextStyle(
     fontStyle: FontStyle.italic,
   ),
-  floatingLabelStyle: TextStyle(
+  floatingLabelStyle: const TextStyle(
     fontWeight: FontWeight.bold,
     color: Colors.lightGreen,
   ),
-  hintStyle: TextStyle(
+  hintStyle: const TextStyle(
     fontStyle: FontStyle.italic,
     fontSize: 14.0,
   ),
@@ -98,16 +98,24 @@ This means that to repeat the borders styling above, instead of providing five d
 
 ```dart
 InputDecorationTheme(
-  border: MaterialStateOutlineInputBorder.resolveWith((states) {
-    final isFocused = states.contains(MaterialState.focused);
-    final isDisabled = states.contains(MaterialState.disabled);
-    final hasError = states.contains(MaterialState.error);
+  border: MaterialStateOutlineInputBorder.resolveWith(
+    (Set<MaterialState> states) {
+      final bool isFocused = states.contains(MaterialState.focused);
+      final bool isDisabled = states.contains(MaterialState.disabled);
+      final bool hasError = states.contains(MaterialState.error);
 
-    final color = isDisabled ? Colors.grey : hasError ? Colors.red : Colors.lightGreen;
-    final width = isFocused ? 2.0 : 1.0;
-    
-    return OutlineInputBorder(borderSide: BorderSide(color: color, width: width));
-  }),
+      final MaterialColor color = isDisabled
+          ? Colors.grey
+          : hasError
+              ? Colors.red
+              : Colors.lightGreen;
+      final double width = isFocused ? 2.0 : 1.0;
+
+      return OutlineInputBorder(
+        borderSide: BorderSide(color: color, width: width),
+      );
+    },
+  ),
 )
 ```
 

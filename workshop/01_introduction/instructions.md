@@ -30,10 +30,10 @@ To start with, `ExampleWidget` consists of three similar `ElevatedButton` widget
 ```dart
 Column(
   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  children: [
-    ElevatedButton(child: Text('first'), onPressed: () {}),
-    ElevatedButton(child: Text('second'), onPressed: () {}),
-    ElevatedButton(child: Text('third'), onPressed: () {}),
+  children: <Widget>[
+    ElevatedButton(child: const Text('first'), onPressed: () {}),
+    ElevatedButton(child: const Text('second'), onPressed: () {}),
+    ElevatedButton(child: const Text('third'), onPressed: () {}),
   ],
 )
 ```

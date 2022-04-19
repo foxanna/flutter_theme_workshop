@@ -2,7 +2,7 @@
 
 In the previous workshop steps the `ThemeData` configuration was applied only to a part of the widget tree wrapped with the `Theme` widget. Other parts of the screen or other screens were not styled in the same way. 
 
-To make the styling consistent across the entire application, the  `MaterialApp` widget exposes a special `theme` field of `ThemeData` type. When set, the given `ThemeData` configuration is applied to all application screens:
+To make the styling consistent across the entire application, the `MaterialApp` widget exposes a special `theme` field of `ThemeData` type. When set, the given `ThemeData` configuration is applied to all application screens:
 
 ```dart
 MaterialApp(
@@ -10,11 +10,11 @@ MaterialApp(
     colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
     elevatedButtonTheme: ElevatedButtonThemeData(...),
   ),
-  home: ExamplePage(),
+  home: const ExamplePage(),
 )
 ```
 
-In fact, under the hood, the `MaterialApp` widget passes the given `theme` value to the inner `Theme` widget, which wraps all application screens.
+In fact, under the hood, the `MaterialApp` widget passes the given `theme` value to the inner `Theme` widget, which wraps at the top of the application.
 
 It's worth mentioning that if no `theme` value is provided to `MaterialApp` widget, the default `ThemeData.light()` is used. That is why the three buttons were blue without any customization.
 

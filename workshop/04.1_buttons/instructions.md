@@ -53,13 +53,17 @@ Let's say the button should have an overlay of different shades of green when ho
 
 ```dart
 ButtonStyle(
-  overlayColor: MaterialStateProperty.resolveWith((states) {
-    if (states.contains(MaterialState.hovered))
-      return Colors.greenAccent;
-    if (states.contains(MaterialState.pressed))
-      return Colors.lightGreenAccent;
-    return null;
-  }),
+  overlayColor: MaterialStateProperty.resolveWith(
+    (Set<MaterialState> states) {
+      if (states.contains(MaterialState.hovered)) {
+        return Colors.greenAccent;
+      }
+      if (states.contains(MaterialState.pressed)) {
+        return Colors.lightGreenAccent;
+      }
+      return null;
+    },
+  ),
 )
 ```
 
@@ -78,10 +82,11 @@ In the previous step of this workshop, it was mentioned that `ElevatedButton`, `
 
 ```dart
 ButtonStyle(
-  textStyle: MaterialStateProperty.resolveWith((states) => 
-    states.contains(MaterialState.pressed)
-      ? TextStyle(fontWeight: FontWeight.bold)
-      : null
+  textStyle: MaterialStateProperty.resolveWith(
+    (Set<MaterialState> states) =>
+        states.contains(MaterialState.pressed)
+            ? const TextStyle(fontWeight: FontWeight.bold)
+            : null,
   ),
 )
 ```

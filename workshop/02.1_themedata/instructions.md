@@ -14,7 +14,7 @@ Theme(
       ),
     ),
   ),
-  child: ExampleWidget(),
+  child: const ExampleWidget(),
 )
 ```
 

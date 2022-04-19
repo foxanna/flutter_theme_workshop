@@ -9,12 +9,11 @@ Typically, applications use a variety of text styles. Thus, `Text` widgets are u
 ```dart
 Text(
   'example',
-  style: TextStyle(
+  style: const TextStyle(
     color: Colors.red,
     fontSize: 18.0,
     fontWeight: FontWeight.bold,
     letterSpacing: 0.8,
-    ...
   ),
 )
 ```
@@ -65,13 +64,14 @@ These should be used as a starting point and further customized with `copyWith` 
 
 ```dart
 ThemeData(
-  textTheme: Typography().black
+  textTheme: Typography()
+    .black
     .apply(
       displayColor: Colors.greenAccent,
       bodyColor: Colors.green,
     )
     .copyWith(
-      displayLarge: TextStyle(
+      displayLarge: const TextStyle(
         color: Colors.lightGreen,
         fontSize: 18.0,
         fontWeight: FontWeight.bold,

@@ -31,7 +31,7 @@ IconTheme(
     size: 36.0,
     opacity: 0.5,
   ),
-  child: Icon(Icons.email),
+  child: const Icon(Icons.email),
 )
 ```
 
@@ -58,7 +58,7 @@ With this change, all application icons would become lime and half-transparent.
 
 ```dart
 IconButton(
-  icon: Icon(Icons.language), 
+  icon: const Icon(Icons.language), 
   onPressed: () {},
 )
 ```
@@ -69,9 +69,9 @@ By default, customizations of the global theme `iconTheme` field also affect `Ic
 
 ```dart
 AppBar(
-  actions: [
+  actions: <Widget>[
     IconButton(
-      icon: Icon(Icons.account_circle), 
+      icon: const Icon(Icons.account_circle), 
       onPressed: () {}
     ),
   ],

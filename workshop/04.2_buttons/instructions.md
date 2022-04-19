@@ -23,18 +23,23 @@ And similarly, a `ButtonStyle` object can be created with the default `ButtonSty
 ```dart
 ButtonStyle(
   foregroundColor: MaterialStateProperty.all(Colors.green),
-  side: MaterialStateProperty.all(BorderSide(color: Colors.green, width: 2)),
+  side: MaterialStateProperty.all(
+    const BorderSide(color: Colors.green, width: 2),
+  ),
   overlayColor: MaterialStateProperty.resolveWith((states) {
-    if (states.contains(MaterialState.hovered))
+    if (states.contains(MaterialState.hovered)) {
       return Colors.greenAccent;
-    if (states.contains(MaterialState.pressed))
+    }
+    if (states.contains(MaterialState.pressed)) {
       return Colors.lightGreenAccent;
+    }
     return null;
   }),
-  textStyle: MaterialStateProperty.resolveWith((states) =>
-    states.contains(MaterialState.pressed)
-      ? TextStyle(fontWeight: FontWeight.bold)
-      : null
+  textStyle: MaterialStateProperty.resolveWith(
+    (Set<MaterialState> states) =>
+        states.contains(MaterialState.pressed)
+            ? const TextStyle(fontWeight: FontWeight.bold)
+            : null,
   ),
 ),
 ```
@@ -47,21 +52,26 @@ Have you noticed that in the code snippet above the `overlayColor` and `textStyl
 class ButtonOverlayColor implements MaterialStateProperty<Color?> {
   @override
   Color? resolve(Set<MaterialState> states) {
-    if (states.contains(MaterialState.hovered)) 
+    if (states.contains(MaterialState.hovered)) {
       return Colors.greenAccent;
-    if (states.contains(MaterialState.pressed)) 
+    }
+    if (states.contains(MaterialState.pressed)) {
       return Colors.lightGreenAccent;
+    }
     return null;
   }
 }
 ```
+
 ```dart
 class ButtonTextStyle implements MaterialStateProperty<TextStyle?> {
   @override
-  TextStyle? resolve(Set<MaterialState> states) =>
-    states.contains(MaterialState.pressed)
-      ? TextStyle(fontWeight: FontWeight.bold)
-      : null;
+  TextStyle? resolve(Set<MaterialState> states) {
+    if (states.contains(MaterialState.pressed)) {
+      return const TextStyle(fontWeight: FontWeight.bold);
+    }
+    return null;
+  }
 }
 ```
 

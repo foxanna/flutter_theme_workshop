@@ -20,4 +20,4 @@ Good luck in mastering Flutter!
 
 > If you are interested in creating DartPad workshops, check the [*Workshop Authoring Guide*](https://github.com/dart-lang/dart-pad/wiki/Workshop-Authoring-Guide).
 >
->Source code for this workshop can be found in [*flutter_theme_workshop GitHub repository*](https://github.com/foxanna/flutter_theme_workshop).
+> Source code for this workshop can be found in [*flutter_theme_workshop GitHub repository*](https://github.com/foxanna/flutter_theme_workshop).
