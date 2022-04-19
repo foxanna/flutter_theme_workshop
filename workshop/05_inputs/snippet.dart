@@ -1,12 +1,12 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, curly_braces_in_flow_control_structures
-
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(ExampleApp());
+  runApp(const ExampleApp());
 }
 
 class ExampleApp extends StatelessWidget {
+  const ExampleApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,20 +16,27 @@ class ExampleApp extends StatelessWidget {
         // TODO 1: Provide inputDecorationTheme field value
         // TODO 2: Provide textSelectionTheme field value
       ),
-      home: ExamplePage(),
+      home: const ExamplePage(),
     );
   }
 }
 
 class ExamplePage extends StatelessWidget {
+  const ExamplePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Consistent design with Flutter Theme'),
-        actions: [IconButton(icon: Icon(Icons.account_circle), onPressed: () {})],
+        title: const Text('Consistent design with Flutter Theme'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.account_circle),
+            onPressed: () {},
+          ),
+        ],
       ),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.all(20.0),
         child: Center(
           child: ExampleWidget(),
@@ -40,11 +47,13 @@ class ExamplePage extends StatelessWidget {
 }
 
 class ExampleWidget extends StatelessWidget {
+  const ExampleWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
+      children: const <Widget>[
         TextField(
           decoration: InputDecoration(
             hintText: 'enabled',

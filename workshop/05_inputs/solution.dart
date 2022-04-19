@@ -1,12 +1,12 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, curly_braces_in_flow_control_structures
-
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(ExampleApp());
+  runApp(const ExampleApp());
 }
 
 class ExampleApp extends StatelessWidget {
+  const ExampleApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,49 +14,62 @@ class ExampleApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         inputDecorationTheme: InputDecorationTheme(
-          errorStyle: TextStyle(
-            fontStyle: FontStyle.italic,
-          ),
-          floatingLabelStyle: TextStyle(
+          errorStyle: const TextStyle(fontStyle: FontStyle.italic),
+          floatingLabelStyle: const TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.lightGreen,
           ),
-          hintStyle: TextStyle(
+          hintStyle: const TextStyle(
             fontStyle: FontStyle.italic,
             fontSize: 14.0,
           ),
           suffixIconColor: Colors.greenAccent,
-          border: MaterialStateOutlineInputBorder.resolveWith((states) {
-            final isFocused = states.contains(MaterialState.focused);
-            final isDisabled = states.contains(MaterialState.disabled);
-            final hasError = states.contains(MaterialState.error);
+          border: MaterialStateOutlineInputBorder.resolveWith(
+            (Set<MaterialState> states) {
+              final bool isFocused = states.contains(MaterialState.focused);
+              final bool isDisabled = states.contains(MaterialState.disabled);
+              final bool hasError = states.contains(MaterialState.error);
 
-            final color = isDisabled ? Colors.grey : hasError ? Colors.red : Colors.lightGreen;
-            final width = isFocused ? 2.0 : 1.0;
+              final MaterialColor color = isDisabled
+                  ? Colors.grey
+                  : hasError
+                      ? Colors.red
+                      : Colors.lightGreen;
+              final double width = isFocused ? 2.0 : 1.0;
 
-            return OutlineInputBorder(borderSide: BorderSide(color: color, width: width));
-          }),
+              return OutlineInputBorder(
+                borderSide: BorderSide(color: color, width: width),
+              );
+            },
+          ),
         ),
-        textSelectionTheme: TextSelectionThemeData(
+        textSelectionTheme: const TextSelectionThemeData(
           cursorColor: Colors.lightGreen,
           selectionColor: Colors.lime,
           selectionHandleColor: Colors.lightGreen,
         ),
       ),
-      home: ExamplePage(),
+      home: const ExamplePage(),
     );
   }
 }
 
 class ExamplePage extends StatelessWidget {
+  const ExamplePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Consistent design with Flutter Theme'),
-        actions: [IconButton(icon: Icon(Icons.account_circle), onPressed: () {})],
+        title: const Text('Consistent design with Flutter Theme'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.account_circle),
+            onPressed: () {},
+          ),
+        ],
       ),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.all(20.0),
         child: Center(
           child: ExampleWidget(),
@@ -67,11 +80,13 @@ class ExamplePage extends StatelessWidget {
 }
 
 class ExampleWidget extends StatelessWidget {
+  const ExampleWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
+      children: const <Widget>[
         TextField(
           decoration: InputDecoration(
             hintText: 'enabled',

@@ -1,15 +1,15 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, curly_braces_in_flow_control_structures
-
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(ExampleApp());
+  runApp(const ExampleApp());
 }
 
 class ExampleApp extends StatelessWidget {
+  const ExampleApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: ExamplePage(),
     );
@@ -17,15 +17,22 @@ class ExampleApp extends StatelessWidget {
 }
 
 class ExamplePage extends StatelessWidget {
+  const ExamplePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Consistent design with Flutter Theme'),
-        actions: [IconButton(icon: Icon(Icons.account_circle), onPressed: () {})],
+        title: const Text('Consistent design with Flutter Theme'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.account_circle),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Center(
           child: Theme(
             data: ThemeData(
@@ -36,7 +43,7 @@ class ExamplePage extends StatelessWidget {
                 ),
               ),
             ),
-            child: ExampleWidget(),
+            child: const ExampleWidget(),
           ),
         ),
       ),
@@ -45,14 +52,16 @@ class ExamplePage extends StatelessWidget {
 }
 
 class ExampleWidget extends StatelessWidget {
+  const ExampleWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        ElevatedButton(child: Text('first'), onPressed: () {}),
-        ElevatedButton(child: Text('second'), onPressed: () {}),
-        ElevatedButton(child: Text('third'), onPressed: () {}),
+      children: <Widget>[
+        ElevatedButton(child: const Text('first'), onPressed: () {}),
+        ElevatedButton(child: const Text('second'), onPressed: () {}),
+        ElevatedButton(child: const Text('third'), onPressed: () {}),
       ],
     );
   }

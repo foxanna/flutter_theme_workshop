@@ -1,12 +1,12 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, curly_braces_in_flow_control_structures
-
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(ExampleApp());
+  runApp(const ExampleApp());
 }
 
 class ExampleApp extends StatelessWidget {
+  const ExampleApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,35 +17,47 @@ class ExampleApp extends StatelessWidget {
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.lime),
             foregroundColor: MaterialStateProperty.all(Colors.blue),
-            overlayColor: MaterialStateProperty.resolveWith((states) {
-              if (states.contains(MaterialState.hovered))
-                return Colors.greenAccent;
-              if (states.contains(MaterialState.pressed))
-                return Colors.lightGreenAccent;
-              return null;
-            }),
-            textStyle: MaterialStateProperty.resolveWith((states) =>
-              states.contains(MaterialState.pressed)
-                ? TextStyle(fontWeight: FontWeight.bold)
-                : null
+            overlayColor: MaterialStateProperty.resolveWith(
+              (Set<MaterialState> states) {
+                if (states.contains(MaterialState.hovered)) {
+                  return Colors.greenAccent;
+                }
+                if (states.contains(MaterialState.pressed)) {
+                  return Colors.lightGreenAccent;
+                }
+                return null;
+              },
+            ),
+            textStyle: MaterialStateProperty.resolveWith(
+              (Set<MaterialState> states) =>
+                  states.contains(MaterialState.pressed)
+                      ? const TextStyle(fontWeight: FontWeight.bold)
+                      : null,
             ),
           ),
         ),
       ),
-      home: ExamplePage(),
+      home: const ExamplePage(),
     );
   }
 }
 
 class ExamplePage extends StatelessWidget {
+  const ExamplePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Consistent design with Flutter Theme'),
-        actions: [IconButton(icon: Icon(Icons.account_circle), onPressed: () {})],
+        title: const Text('Consistent design with Flutter Theme'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.account_circle),
+            onPressed: () {},
+          ),
+        ],
       ),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.all(20.0),
         child: Center(
           child: ExampleWidget(),
@@ -56,14 +68,16 @@ class ExamplePage extends StatelessWidget {
 }
 
 class ExampleWidget extends StatelessWidget {
+  const ExampleWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        ElevatedButton(child: Text('ElevatedButton'), onPressed: () {}),
-        OutlinedButton(child: Text('OutlinedButton'), onPressed: () {}),
-        TextButton(child: Text('TextButton'), onPressed: () {}),
+      children: <Widget>[
+        ElevatedButton(child: const Text('ElevatedButton'), onPressed: () {}),
+        OutlinedButton(child: const Text('OutlinedButton'), onPressed: () {}),
+        TextButton(child: const Text('TextButton'), onPressed: () {}),
       ],
     );
   }
