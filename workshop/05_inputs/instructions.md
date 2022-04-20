@@ -40,11 +40,11 @@ Additionally, text style of the `hint` and of the `text` entered in the `TextFie
 
 `TextField` borders deserve a special attention. They are:
 
-* `enabledBorder` - the border to display when the widget is enabled and is not showing an error;
-* `focusedBorder` - the border to display when the widget has the focus and is not showing an error;
-* `errorBorder` - the border to display when the widget does not have the focus and is showing an error;
-* `focusedErrorBorder` - the border to display when the widget has the focus and is showing an error;
-* `disabledBorder` - the border to display when the widget is disabled and is not showing an error;
+* `enabledBorder` - displayed when the widget is enabled and is not showing an error;
+* `focusedBorder` - displayed when the widget has the focus and is not showing an error;
+* `errorBorder` - displayed when the widget does not have the focus and is showing an error;
+* `focusedErrorBorder` - displayed when the widget has the focus and is showing an error;
+* `disabledBorder` - displayed when the widget is disabled and is not showing an error;
 * `border` - this property is only used when the appropriate one of the above is not specified.
 
 These values default to `UnderlineInputBorder` which draws a horizontal line at the bottom of a widget. Instead, let's define a custom set of borders using an `OutlineInputBorder` which draws a rounded rectangle around the widget. It should be twice thicker when focused, light green when enabled, red in case of error, and grey when disabled:

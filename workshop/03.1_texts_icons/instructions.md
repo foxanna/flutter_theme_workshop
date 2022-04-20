@@ -2,6 +2,7 @@
 
 Though providing a `ColorScheme` is a powerful consistent way to style most of the application components, there might be the desire to tweak some widgets individually. This and the next workshop steps are dedicated to customizing some of the most used widgets.
 
+<!-- These breadcrumbs explaining the differences between each step are great. -->
 Check the code snippet on the right. The `ExampleWidget` content changed to `Icon` and `IconButton` widgets.
 
 ## Icon style

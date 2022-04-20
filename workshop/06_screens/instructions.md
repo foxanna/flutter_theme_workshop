@@ -15,6 +15,7 @@ Scaffold(
 )
 ```
 
+<!-- Hm, since it seems like there's an interesting API dilemma here, it might make sense to focus on the scaffoldBackgroundColor for now? -->
 And to apply such configuration to all `Scaffold` widgets, you have to modify `ColorScheme.background` property**:
 
 ```dart
@@ -70,6 +71,7 @@ AppBarTheme(
 
 Remember the `MaterialStateColor` class from previous workshop step? The one that enables providing `MaterialStateProperty<Color>` to a field of type `Color`. The `AppBar` background can change responding to `scrolledUnder` material state:
 
+<!-- Very cool example of the scrolledUnder attribute! -->
 ```dart
 AppBarTheme(
   backgroundColor: MaterialStateColor.resolveWith((states) =>

@@ -38,14 +38,14 @@ ButtonStyle(
 
 Some interactive material widgets like buttons or text inputs when receiving input from the user can be characterized by zero or more [*material states*](https://material.io/design/interaction/states.html). The `MaterialState` is an enum representing such states:
 
-* `hovered` - the state when the user drags their mouse cursor over a given widget
-* `focused` - the state when the user navigates with the keyboard to a given widget
-* `pressed` - the state when the user is actively pressing down on a given widget
-* `dragged` - the state when the user drags a given widget from one place to another
-* `selected` - the state when a given widget has been selected
-* `scrolledUnder` - the state when a given widget overlaps the content of a scrollable below
-* `disabled` - the state when a given widget is disabled and cannot be interacted with
-* `error` - the state when a given widget has entered some form of invalid state
+* `hovered` - when the user moves their mouse cursor over a given widget
+* `focused` - when the user navigates with the keyboard to a given widget
+* `pressed` - when the user is actively tapping or clicking on a given widget
+* `dragged` - when the user moves a given widget from one place to another
+* `selected` - when a given widget has been toggled on, such as a checkbox or radio button
+* `scrolledUnder` - when a given widget overlaps the content of a scrollable below
+* `disabled` - when a given widget cannot be interacted with
+* `error` - when a given widget has entered some form of invalid state
 
 The `MaterialStateProperty<T>` is an interface for classes that resolve to a value of type `T` based on a widget's interactive states set. It's easier to understand by looking at the example. 
 

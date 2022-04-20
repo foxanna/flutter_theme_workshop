@@ -37,7 +37,7 @@ ThemeData(
 
 ## Predefined ThemeData
 
-Obviously, specifying values for all `ThemeData` fields would be a tedious work. There are additional constructors for obtaining a well-made predefined collections of styles:
+Obviously, specifying values for all `ThemeData` fields would be tedious. There are additional constructors for obtaining a well-made predefined collections of styles:
 
 * `ThemeData.light()` returns a default light blue theme
 * `ThemeData.dark()` returns a default dark teal theme
@@ -89,4 +89,10 @@ Theme(
 
 ## Your turn
 
-1. Provide `colorScheme` field to the `ThemeData` constructor. Use `ColorScheme.fromSeed` constructor with `Colors.green` color.
+1. Provide `colorScheme` field to the `ThemeData` constructor. Use `ColorScheme.fromSeed` constructor with `Colors.green` color. Run the app.
+2. Remove the `elevatedButtonTheme`. Run the code again! What is the difference?
+
+<!-- Reviewers note: By providing a colorScheme without removing 
+`elevatedButtonTheme` the user sees no difference. I'm not sure if removing the
+ elevatedButtonTheme is an exercise you want the reader to solve. If that's the
+  case, no need for any changes :) -->

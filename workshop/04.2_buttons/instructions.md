@@ -20,10 +20,15 @@ MaterialApp(
 
 And similarly, a `ButtonStyle` object can be created with the default `ButtonStyle` constructor, that allows more granular configuration:
 
+<!-- Maybe make some note about the `side` property in particular? I remember 
+struggling to find how to change the border color when I first used this widget,
+since `side` feels like a weird name to me. Not sure if others ran into the 
+same thing. -->
 ```dart
 ButtonStyle(
-  foregroundColor: MaterialStateProperty.all(Colors.green),
+  // The Side Property configures the border color of an OutlinedButton
   side: MaterialStateProperty.all(BorderSide(color: Colors.green, width: 2)),
+  foregroundColor: MaterialStateProperty.all(Colors.green),
   overlayColor: MaterialStateProperty.resolveWith((states) {
     if (states.contains(MaterialState.hovered))
       return Colors.greenAccent;
@@ -41,6 +46,7 @@ ButtonStyle(
 
 ## Reusing MaterialStateProperty
 
+<!-- This is very cool content! -->
 Have you noticed that in the code snippet above the `overlayColor` and `textStyle` values are exactly the same as for the `ElevatedButton` from the previous workshop step? It may happen that different widget types are required to have the same styling of some UI aspects and thus should share the same `MaterialStateProperty` logic. To make the implementation easy and consistent, inheritors of `MaterialStateProperty` can be declared:
 
 ```dart
