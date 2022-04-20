@@ -17,11 +17,11 @@ class ExampleApp extends StatelessWidget {
           background: Colors.green[50],
         ),
         appBarTheme: AppBarTheme(
-          backgroundColor: MaterialStateColor.resolveWith((states) =>
-            states.contains(MaterialState.scrolledUnder)
-              ? Colors.limeAccent
-              : Colors.lime
-          ),
+          backgroundColor: MaterialStateColor.resolveWith((states) {
+            return states.contains(MaterialState.scrolledUnder)
+                ? Colors.limeAccent
+                : Colors.lime;
+          }),
           foregroundColor: Colors.blue,
           elevation: 8.0,
           actionsIconTheme: IconThemeData(color: Colors.blue),

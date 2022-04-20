@@ -72,11 +72,11 @@ Remember the `MaterialStateColor` class from previous workshop step? The one tha
 
 ```dart
 AppBarTheme(
-  backgroundColor: MaterialStateColor.resolveWith((states) =>
-    states.contains(MaterialState.scrolledUnder)
-      ? Colors.limeAccent
-      : Colors.lime
-  ),
+  backgroundColor: MaterialStateColor.resolveWith((states) {
+    return states.contains(MaterialState.scrolledUnder)
+        ? Colors.limeAccent
+        : Colors.lime;
+  }),
 )
 ```
 
