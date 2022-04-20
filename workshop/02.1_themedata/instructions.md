@@ -37,7 +37,7 @@ ThemeData(
 
 ## Predefined ThemeData
 
-Obviously, specifying values for all `ThemeData` fields would be a tedious work. There are additional constructors for obtaining a well-made predefined collections of styles:
+Obviously, specifying values for all `ThemeData` fields would be tedious. There are additional constructors for obtaining a well-made predefined collections of styles:
 
 * `ThemeData.light()` returns a default light blue theme
 * `ThemeData.dark()` returns a default dark teal theme
