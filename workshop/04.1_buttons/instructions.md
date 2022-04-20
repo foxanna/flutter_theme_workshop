@@ -78,11 +78,11 @@ In the previous step of this workshop, it was mentioned that `ElevatedButton`, `
 
 ```dart
 ButtonStyle(
-  textStyle: MaterialStateProperty.resolveWith((states) => 
-    states.contains(MaterialState.pressed)
-      ? TextStyle(fontWeight: FontWeight.bold)
-      : null
-  ),
+  textStyle: MaterialStateProperty.resolveWith((states) {
+    return states.contains(MaterialState.pressed)
+        ? TextStyle(fontWeight: FontWeight.bold)
+        : null;
+  }),
 )
 ```
 

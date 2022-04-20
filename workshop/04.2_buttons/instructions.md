@@ -31,11 +31,11 @@ ButtonStyle(
       return Colors.lightGreenAccent;
     return null;
   }),
-  textStyle: MaterialStateProperty.resolveWith((states) =>
-    states.contains(MaterialState.pressed)
-      ? TextStyle(fontWeight: FontWeight.bold)
-      : null
-  ),
+  textStyle: MaterialStateProperty.resolveWith((states) {
+    return states.contains(MaterialState.pressed)
+        ? TextStyle(fontWeight: FontWeight.bold)
+        : null;
+  }),
 ),
 ```
 
@@ -58,10 +58,11 @@ class ButtonOverlayColor implements MaterialStateProperty<Color?> {
 ```dart
 class ButtonTextStyle implements MaterialStateProperty<TextStyle?> {
   @override
-  TextStyle? resolve(Set<MaterialState> states) =>
-    states.contains(MaterialState.pressed)
-      ? TextStyle(fontWeight: FontWeight.bold)
-      : null;
+  TextStyle? resolve(Set<MaterialState> states) {
+    return states.contains(MaterialState.pressed)
+        ? TextStyle(fontWeight: FontWeight.bold)
+        : null;
+  }
 }
 ```
 
