@@ -2,7 +2,7 @@
 
 In the previous workshop steps the `ThemeData` configuration was applied only to a part of the widget tree wrapped with the `Theme` widget. Other parts of the screen or other screens were not styled in the same way. 
 
-To make the styling consistent across the entire application, the  `MaterialApp` widget exposes a special `theme` field of `ThemeData` type. When set, the given `ThemeData` configuration is applied to all application screens:
+To make the styling consistent across the entire application, the `MaterialApp` widget exposes a special `theme` field of `ThemeData` type. When set, the given `ThemeData` configuration is applied to all application screens:
 
 ```dart
 MaterialApp(
