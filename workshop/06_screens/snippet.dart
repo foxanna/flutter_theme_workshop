@@ -12,10 +12,8 @@ class ExampleApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.green,
-          // TODO 1: Provide background field value
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        // TODO 1: Provide scaffoldBackgroundColor field value
         // TODO 2: Provide appBarTheme field value
       ),
       home: ExamplePage(),

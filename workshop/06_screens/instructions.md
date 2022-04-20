@@ -10,32 +10,17 @@ Check the code snippet on the right. The `ExampleWidget` content changed to a sc
 
 ```dart
 Scaffold(
-  backgroundColor: Colors.green[50],
+  backgroundColor: Colors.blue[50],
   body: ...
 )
 ```
 
-And to apply such configuration to all `Scaffold` widgets, you have to modify `ColorScheme.background` property**:
+And to apply such configuration to all `Scaffold` widgets, you have to modify `scaffoldBackgroundColor` field value:
 
 ```dart
 MaterialApp(
   theme: ThemeData(
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.green, 
-      background: Colors.green[50],
-    ),
-  ),
-  ...
-)
-```
-
-Or, if you have been using a `colorSchemeSeed` property to create a `ColorScheme`, you can set a `scaffoldBackgroundColor` field:
-
-```dart
-MaterialApp(
-  theme: ThemeData(
-    colorSchemeSeed: Colors.green,
-    scaffoldBackgroundColor: Colors.green[50],
+    scaffoldBackgroundColor: Colors.blue[50],
   ),
   ...
 )
@@ -82,8 +67,5 @@ AppBarTheme(
 
 ## Your turn
 
-1. Modify global `ColorScheme` by providing `background` field value**.
+1. Modify global `ThemeData` by providing `scaffoldBackgroundColor` field value.
 2. Define global `appBarTheme` using customizations given above. Set `backgroundColor` field of the `AppBarTheme` to a `MaterialStateColor` instance. Scroll the list of lime boxes to see the `AppBar` background change.
-
-
-** The above would only be valid if [this issue](https://github.com/flutter/flutter/issues/101389) fix is released before the event

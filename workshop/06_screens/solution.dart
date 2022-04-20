@@ -12,10 +12,8 @@ class ExampleApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.green,
-          background: Colors.green[50],
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        scaffoldBackgroundColor: Colors.blue[50],
         appBarTheme: AppBarTheme(
           backgroundColor: MaterialStateColor.resolveWith((states) {
             return states.contains(MaterialState.scrolledUnder)
