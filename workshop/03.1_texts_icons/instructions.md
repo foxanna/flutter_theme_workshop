@@ -54,7 +54,7 @@ With this change, all application icons would become lime and half-transparent.
 
 ## IconButton style
 
-`Icon` widgets are not interactive. For interactive icons, Flutter has a dedicated `IconButton` widget.
+`Icon` widgets are not interactive. For interactive icons, Flutter has a dedicated `IconButton` widget:
 
 ```dart
 IconButton(
