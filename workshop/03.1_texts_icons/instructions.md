@@ -54,7 +54,7 @@ With this change, all application icons would become lime and half-transparent.
 
 ## IconButton style
 
-`Icon` widgets are not interactive. For interactive icons, Flutter has a dedicated `IconButton` widget. The above customization also affects the look of `IconButton` widgets, so any button like this would also become lime:
+`Icon` widgets are not interactive. For interactive icons, Flutter has a dedicated `IconButton` widget.
 
 ```dart
 IconButton(
@@ -62,6 +62,8 @@ IconButton(
   onPressed: () {},
 )
 ```
+
+Customizing `IconButton` widgets is done through the same `iconTheme` field of the global `ThemeData` object. So with the setup above any `IconButton` would also become lime and half-transparent.
 
 ## AppBar Icon style
 
@@ -82,4 +84,4 @@ Next steps of this workshop show how to customize icons located in the `AppBar` 
 
 ## Your turn
 
-1. Customize global `iconTheme`. The email and globe icons should become lime and half-transparent. The account icon in the top corner should become half-transparent.
+1. Customize global `iconTheme` as shown above. The email and globe icons should become lime and half-transparent. The account icon in the top corner should become half-transparent.
