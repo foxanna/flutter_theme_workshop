@@ -68,4 +68,4 @@ AppBarTheme(
 ## Your turn
 
 1. Modify global `ThemeData` by providing `scaffoldBackgroundColor` field value.
-2. Define global `appBarTheme` using customizations given above. Set `backgroundColor` field of the `AppBarTheme` to a `MaterialStateColor` instance. Scroll the list of lime boxes to see the `AppBar` background change.
+2. Define global `appBarTheme` using customizations given above. Set `backgroundColor` field of the `AppBarTheme` to a `MaterialStateColor` instance. Scroll the list of lime boxes to see the `AppBar` background change<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=step09&tid=UA-227136526-1" style="width: 1px; height: 1px"/>.
