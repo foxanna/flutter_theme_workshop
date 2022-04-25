@@ -84,4 +84,4 @@ Next steps of this workshop show how to customize icons located in the `AppBar` 
 
 ## Your turn
 
-1. Customize global `iconTheme` as shown above. The email and globe icons should become lime and half-transparent. The account icon in the top corner should become half-transparent.
+1. Customize global `iconTheme` as shown above. The email and globe icons should become lime and half-transparent. The account icon in the top corner should become half-transparent<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=step04&tid=UA-227136526-1" style="width: 1px; height: 1px"/>.

@@ -107,4 +107,4 @@ In fact, providing global `TextTheme` is also a way to implicitly customize some
 ## Your turn
 
 1. Customize `TextTheme` globally with the `Typography().black` instance.
-2. Apply customizations with `.apply` and `.copyWith` methods.
+2. Apply customizations with `.apply` and `.copyWith` methods<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=step05&tid=UA-227136526-1" style="width: 1px; height: 1px"/>.
