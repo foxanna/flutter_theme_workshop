@@ -42,4 +42,4 @@ ThemeData theme = Theme.of(context);
 
 1. Copy the `data` field value from the `Theme` widget into the `theme` field of the `MaterialApp`. The `AppBar` background color should change to green.
 2. Remove `Theme` widget around `ExampleWidget`. All three buttons should remain lime.
-3. Set the `darkTheme` field of the `MaterialApp` to the predefined dark theme. Try different values for the `themeMode` field of the `MaterialApp`.
+3. Set the `darkTheme` field of the `MaterialApp` to the predefined dark theme. Try different values for the `themeMode` field<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=step03&tid=UA-227136526-1" style="width: 1px; height: 1px"/>.

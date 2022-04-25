@@ -89,4 +89,4 @@ Theme(
 
 ## Your turn
 
-1. Provide `colorScheme` field to the `ThemeData` constructor. Use `ColorScheme.fromSeed` constructor with `Colors.green` color. No changes happen to the style of the buttons because it is explicitly customized with `ElevatedButtonThemeData`. If it is removed, buttons become green thanks to the `colorScheme` provided. Try it out with and without `elevatedButtonTheme` field set.  
+1. Provide `colorScheme` field to the `ThemeData` constructor. Use `ColorScheme.fromSeed` constructor with `Colors.green` color. No changes happen to the style of the buttons because it is explicitly customized with `ElevatedButtonThemeData`. If it is removed, buttons become green thanks to the `colorScheme` provided. Try it out with and without `elevatedButtonTheme` field set<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=step02&tid=UA-227136526-1" style="width: 1px; height: 1px"/>.
