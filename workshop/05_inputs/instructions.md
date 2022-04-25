@@ -131,4 +131,4 @@ MaterialApp(
 ## Your turn
 
 1. Define global `inputDecorationTheme` using `InputDecorationTheme` with all customizations given above. Use `MaterialStateOutlineInputBorder` to define the `border` field value. Enter some text into input fields, switch between fields to see different UI when they are focused or not.
-2. Define global `textSelectionTheme` using customizations given above. Select entered texts to see the effect.
+2. Define global `textSelectionTheme` using customizations given above. Select entered texts to see the effect<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=step08&tid=UA-227136526-1" style="width: 1px; height: 1px"/>.
