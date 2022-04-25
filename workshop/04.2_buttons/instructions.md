@@ -107,4 +107,4 @@ MaterialApp(
 1. Declare `ButtonOverlayColor` and `ButtonTextStyle` classes to reuse their `MaterialStateProperty` logic in multiple styles.
 2. Update the `ElevatedButtonThemeData` fields: `overlayColor` to a `ButtonOverlayColor` instance, `textStyle` to a `ButtonTextStyle` instance.
 3. Define the global `outlinedButtonTheme` with the `style` created using `ButtonStyle()` default constructor. Apply customizations of `foregroundColor` and `side` fields provided above.  Set `overlayColor` and `textStyle` field values the same way as `ElevatedButtonThemeData` fields.  
-4. Customize the global `textButtonTheme` using the `style` obtained with `TextButton.styleFrom` method, apply customization of `primary` color provided above.
+4. Customize the global `textButtonTheme` using the `style` obtained with `TextButton.styleFrom` method, apply customization of `primary` color provided above<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=step07&tid=UA-227136526-1" style="width: 1px; height: 1px"/>.

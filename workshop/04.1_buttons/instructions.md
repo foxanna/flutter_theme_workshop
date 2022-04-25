@@ -88,4 +88,4 @@ ButtonStyle(
 
 ## Your turn
 
-1. Customize the global theme `elevatedButtonTheme` field with `ElevatedButtonThemeData` object. Create its `style` using `ButtonStyle()` default constructor. Apply customizations of `backgroundColor`, `foregroundColor`, `overlayColor`, and `textStyle` provided above.
+1. Customize the global theme `elevatedButtonTheme` field with `ElevatedButtonThemeData` object. Create its `style` using `ButtonStyle()` default constructor. Apply customizations of `backgroundColor`, `foregroundColor`, `overlayColor`, and `textStyle` provided above<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=step06&tid=UA-227136526-1" style="width: 1px; height: 1px"/>.
