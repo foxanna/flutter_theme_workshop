@@ -16,7 +16,7 @@ The goal of this workshop was to show how it is possible to customize different 
 * Also read about [*Material design*](https://m3.material.io/), especially about [*Color schemes*](https://m3.material.io/styles/color/the-color-system/color-roles).
 * Watch the [*"MaterialStateProperties" episode*](https://www.youtube.com/watch?v=CylXr3AF3uU) of the [*Decoding Flutter*](https://www.youtube.com/playlist?list=PLjxrf2q8roU1fRV40Ec8200rX6OuQkmnl) series.
     
-Good luck in mastering Flutter!
+Good luck in mastering Flutter<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=step10&tid=UA-227136526-1" style="width: 1px; height: 1px"/>!
 
 > If you are interested in creating DartPad workshops, check the [*Workshop Authoring Guide*](https://github.com/dart-lang/dart-pad/wiki/Workshop-Authoring-Guide).
 
