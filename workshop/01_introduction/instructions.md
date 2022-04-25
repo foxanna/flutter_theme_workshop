@@ -78,4 +78,4 @@ The result is the same: a lime button with blue text. But now, when placed close
 
 ## Your turn
 
-1. Apply the `Theme` from the code snippet above to the `ExampleWidget`. All three buttons should become lime.
+1. Apply the `Theme` from the code snippet above to the `ExampleWidget`. All three buttons should become lime<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=step01&tid=UA-227136526-1" style="width: 1px; height: 1px"/>.
