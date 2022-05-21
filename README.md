@@ -7,3 +7,11 @@ Source code for the "Consistent design with Flutter Theme" DartPad workshop by [
 [View in DartPad](https://dartpad.dev/workshops.html?webserver=https://raw.githubusercontent.com/foxanna/flutter_theme_workshop/main/workshop)
 
 ![](images/cover.png)
+
+## Google I/O 2022 Adventure
+
+This workshop was featured in Google I/O 2022 Adventure world in Flutter workshops zone.
+
+![](images/adventure_workshop.png)
+
+![](images/adventure_avatar.png)
