@@ -32,8 +32,8 @@ class ExamplePage extends StatelessWidget {
               // TODO 1: Provide colorScheme value
               elevatedButtonTheme: ElevatedButtonThemeData(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.lime,
-                  onPrimary: Colors.blue,
+                  backgroundColor: Colors.lime,
+                  foregroundColor: Colors.blue,
                 ),
               ),
             ),
