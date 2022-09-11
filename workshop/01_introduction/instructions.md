@@ -45,8 +45,8 @@ To make UI more interesting, let's design a lime button with blue text:
 ```dart
 ElevatedButton(
   style: ElevatedButton.styleFrom(
-    primary: Colors.lime,
-    onPrimary: Colors.blue,
+    backgroundColor: Colors.lime,
+    foregroundColor: Colors.blue,
   ),
   ...
 )
@@ -65,8 +65,8 @@ Theme(
   data: ThemeData(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: Colors.lime,
-        onPrimary: Colors.blue,
+        backgroundColor: Colors.lime,
+        foregroundColor: Colors.blue,
       ),
     ),
   ),
