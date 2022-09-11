@@ -9,7 +9,7 @@ MaterialApp(
   theme: ThemeData(
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        primary: Colors.green,
+        foregroundColor: Colors.green,
         side: BorderSide(color: Colors.green, width: 2),
       ),
     ),
@@ -94,7 +94,7 @@ MaterialApp(
   theme: ThemeData(
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
-        primary: Colors.lightGreen,
+        foregroundColor: Colors.lightGreen,
       ),
     ),
   ),
