@@ -80,7 +80,7 @@ In the previous step of this workshop, it was mentioned that `ElevatedButton`, `
 ButtonStyle(
   textStyle: MaterialStateProperty.resolveWith((states) {
     return states.contains(MaterialState.pressed)
-        ? TextStyle(fontWeight: FontWeight.bold)
+        ? TextStyle(fontWeight: FontWeight.bold, inherit: false)
         : null;
   }),
 )

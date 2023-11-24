@@ -26,7 +26,7 @@ class ExampleApp extends StatelessWidget {
             }),
             textStyle: MaterialStateProperty.resolveWith((states) {
               return states.contains(MaterialState.pressed)
-                  ? TextStyle(fontWeight: FontWeight.bold)
+                  ? TextStyle(fontWeight: FontWeight.bold, inherit: false)
                   : null;
             }),
           ),

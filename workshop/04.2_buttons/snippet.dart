@@ -30,7 +30,7 @@ class ExampleApp extends StatelessWidget {
             // TODO 2: Replace textStyle field value with an instance of ButtonTextStyle
             textStyle: MaterialStateProperty.resolveWith((states) {
               return states.contains(MaterialState.pressed)
-                  ? TextStyle(fontWeight: FontWeight.bold)
+                  ? TextStyle(fontWeight: FontWeight.bold, inherit: false)
                   : null;
             }),
           ),

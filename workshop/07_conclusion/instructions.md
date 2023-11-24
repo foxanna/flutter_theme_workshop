@@ -13,6 +13,7 @@ The goal of this workshop was to show how it is possible to customize different 
 ## What's next
 
 * `ThemeData` object has many more fields dedicated to configuring various aspects of the application design. Check out the [*documentation*](https://api.flutter.dev/flutter/material/ThemeData-class.html) to learn more.  
+* If the standard fields set it not enough, `ThemeData` object can be enhanced with custom values set through the `ThemeExtension` mechanism.  Check out the [*documentation*](https://api.flutter.dev/flutter/material/ThemeExtension-class.html) to learn more.
 * Also read about [*Material design*](https://m3.material.io/), especially about [*Color schemes*](https://m3.material.io/styles/color/the-color-system/color-roles).
 * Watch the [*"MaterialStateProperties" episode*](https://www.youtube.com/watch?v=CylXr3AF3uU) of the [*Decoding Flutter*](https://www.youtube.com/playlist?list=PLjxrf2q8roU1fRV40Ec8200rX6OuQkmnl) series.
     

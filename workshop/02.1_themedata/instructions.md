@@ -39,8 +39,8 @@ ThemeData(
 
 Obviously, specifying values for all `ThemeData` fields would be tedious. There are additional constructors for obtaining a well-made predefined collections of styles:
 
-* `ThemeData.light()` returns a default light blue theme
-* `ThemeData.dark()` returns a default dark teal theme
+* `ThemeData.light()` returns a default light lilac theme
+* `ThemeData.dark()` returns a default dark lilac theme
 
 They can be used as a basis for a good application design, and can be further customized with `copyWith` method:
 

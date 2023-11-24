@@ -21,7 +21,7 @@ class ButtonTextStyle implements MaterialStateProperty<TextStyle?> {
   @override
   TextStyle? resolve(Set<MaterialState> states) {
     return states.contains(MaterialState.pressed)
-        ? TextStyle(fontWeight: FontWeight.bold)
+        ? TextStyle(fontWeight: FontWeight.bold, inherit: false)
         : null;
   }
 }

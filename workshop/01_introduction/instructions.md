@@ -38,7 +38,7 @@ Column(
 )
 ```
 
-Run the code snippet on the right. You will see three similarly-looking blue buttons with white text. 
+Run the code snippet on the right. You will see three similarly-looking lilac (blue in pre-Material3 theme) buttons with white text. 
 
 To make UI more interesting, let's design a lime button with blue text:
 
