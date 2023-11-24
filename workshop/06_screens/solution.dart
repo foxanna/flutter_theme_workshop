@@ -13,16 +13,16 @@ class ExampleApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-        scaffoldBackgroundColor: Colors.blue[50],
+        scaffoldBackgroundColor: Colors.green[50],
         appBarTheme: AppBarTheme(
           backgroundColor: MaterialStateColor.resolveWith((states) {
             return states.contains(MaterialState.scrolledUnder)
                 ? Colors.limeAccent
                 : Colors.lime;
           }),
-          foregroundColor: Colors.blue,
+          foregroundColor: Colors.white,
           elevation: 8.0,
-          actionsIconTheme: IconThemeData(color: Colors.blue),
+          actionsIconTheme: IconThemeData(color: Colors.white),
           centerTitle: false,
         ),
       ),

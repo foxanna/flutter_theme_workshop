@@ -12,7 +12,7 @@ MaterialApp(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.lime,
-        foregroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
     ),
   ),
@@ -63,12 +63,12 @@ ButtonStyle(
 )
 ```
 
-At the same time, a button should always have lime background and blue text. It means the `backgroundColor` and `foregroundColor` fields of type `MaterialStateProperty<Color?>` should resolve to a single value for all states:
+At the same time, a button should always have lime background and white text. It means the `backgroundColor` and `foregroundColor` fields of type `MaterialStateProperty<Color?>` should resolve to a single value for all states:
 
 ```dart
 ButtonStyle(
   backgroundColor: MaterialStateProperty.all(Colors.lime),
-  foregroundColor: MaterialStateProperty.all(Colors.blue),
+  foregroundColor: MaterialStateProperty.all(Colors.white),
 )
 ```
 

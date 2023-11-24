@@ -40,7 +40,7 @@ class ExamplePage extends StatelessWidget {
               elevatedButtonTheme: ElevatedButtonThemeData(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.lime,
-                  foregroundColor: Colors.blue,
+                  foregroundColor: Colors.white,
                 ),
               ),
             ),

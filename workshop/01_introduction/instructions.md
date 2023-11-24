@@ -40,13 +40,13 @@ Column(
 
 Run the code snippet on the right. You will see three similarly-looking pale purple (blue in pre-Material3 theme) buttons with deep purple text. 
 
-To make UI more interesting, let's design a lime button with blue text:
+To make UI more custom, let's design a lime button with white text:
 
 ```dart
 ElevatedButton(
   style: ElevatedButton.styleFrom(
     backgroundColor: Colors.lime,
-    foregroundColor: Colors.blue,
+    foregroundColor: Colors.white,
   ),
   ...
 )
@@ -66,7 +66,7 @@ Theme(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.lime,
-        foregroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
     ),
   ),
@@ -74,7 +74,7 @@ Theme(
 )
 ```
 
-The result is the same: a lime button with blue text. But now, when placed closer to the top of the widgets tree, this `Theme` widget can help to consistently style all buttons on the screen.
+The result is the same: a lime button with white text. But now, when placed closer to the top of the widgets tree, this `Theme` widget can help to consistently style all buttons on the screen.
 
 ## Your turn
 

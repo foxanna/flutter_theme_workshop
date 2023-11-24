@@ -36,7 +36,7 @@ class ExampleApp extends StatelessWidget {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.lime),
-            foregroundColor: MaterialStateProperty.all(Colors.blue),
+            foregroundColor: MaterialStateProperty.all(Colors.white),
             overlayColor: ButtonOverlayColor(),
             textStyle: ButtonTextStyle(),
           ),

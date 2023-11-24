@@ -10,7 +10,7 @@ Check the code snippet on the right. The `ExampleWidget` content changed to a sc
 
 ```dart
 Scaffold(
-  backgroundColor: Colors.blue[50],
+  backgroundColor: Colors.green[50],
   body: ...
 )
 ```
@@ -20,7 +20,7 @@ And to apply such configuration to all `Scaffold` widgets, you have to modify `s
 ```dart
 MaterialApp(
   theme: ThemeData(
-    scaffoldBackgroundColor: Colors.blue[50],
+    scaffoldBackgroundColor: Colors.green[50],
   ),
   ...
 )
@@ -44,9 +44,9 @@ Some of customizable `AppBarTheme` properties are:
 ```dart
 AppBarTheme(
   backgroundColor: Colors.lime,
-  foregroundColor: Colors.blue,
+  foregroundColor: Colors.white,
   elevation: 8.0,
-  actionsIconTheme: IconThemeData(color: Colors.blue),
+  actionsIconTheme: IconThemeData(color: Colors.white),
   centerTitle: false,
 )
 ```
